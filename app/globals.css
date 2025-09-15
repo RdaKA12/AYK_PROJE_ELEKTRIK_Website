@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --brand:#D9251C;       /* kırmızı (vurgularda) */
+  --brand-dark:#B01E16;
+  --ink:#111111;         /* ana metin */
+  --paper:#FAFAFA;       /* açık arka plan */
+  --muted:#6B7280;       /* ikincil metin */
+}
+
+/* İsteğe bağlı küçük dokunuşlar */
+a { transition: color .2s ease; }

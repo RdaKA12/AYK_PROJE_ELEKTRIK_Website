@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aykproje.com.tr/sitemap.xml

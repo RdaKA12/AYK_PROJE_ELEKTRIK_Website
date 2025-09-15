@@ -1,0 +1,52 @@
+{
+  "compilerOptions": {
+    /* Modern target: editör ve tip çıkarımı için ES2021+ önerilir */
+    "target": "ES2021",
+
+    /* Next ile uyumlu libs */
+    "lib": ["dom", "dom.iterable", "esnext"],
+
+    /* Mevcut JS dosyalarını da derleyebilsin istiyorsan true kalsın */
+    "allowJs": true,
+
+    /* Derleme hız/kararlılık */
+    "skipLibCheck": true,
+    "incremental": true,
+    "noEmit": true,
+
+    /* Sıkı tip güvenliği */
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Modül sistemi ve çözümleyici (Next 13+ için “bundler”) */
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "isolatedModules": true,
+
+    /* JSON importları için gerekli */
+    "resolveJsonModule": true,
+
+    /* React/Next JSX işleyişi */
+    "jsx": "preserve",
+
+    /* Kökten alias kullanımı (import "@/data/..." gibi) */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"]
+    },
+
+    /* Env/Node türleri (process.env vs.) daha iyi tanınsın */
+    "types": ["node"],
+
+    /* Next’in TS plugin’i */
+    "plugins": [{ "name": "next" }]
+
+    /* İsteğe bağlı ekler:
+       "verbatimModuleSyntax": true,
+       "noUncheckedIndexedAccess": true
+    */
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}
