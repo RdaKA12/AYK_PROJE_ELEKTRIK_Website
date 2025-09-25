@@ -15,6 +15,38 @@ const firstDefined = (...values: Maybe<string>[]) => values.find((value) => type
 
 let cachedTransporter: ReturnType<typeof nodemailer.createTransport> | null = null;
 
+const safeDecodeURIComponent = (value: string) => {
+  try {
+    return decodeURIComponent(value);
+  } catch {
+    return value;
+  }
+};
+
+const sanitizeConnectionUrl = (connectionUrl: string) => {
+  if (!connectionUrl) return connectionUrl;
+
+  const trimmed = connectionUrl.trim();
+  if (!trimmed) return trimmed;
+
+  // Normalize credentials (especially passwords) that may contain reserved characters
+  // such as # or &. These characters break the URL parser unless they are encoded.
+  const match = trimmed.match(/^([^:]+):\/\/([^@]+)@(.*)$/);
+  if (!match) return trimmed;
+
+  const [, protocol, authPart, hostPart] = match;
+  const colonIndex = authPart.indexOf(":");
+  if (colonIndex === -1) return trimmed;
+
+  const rawUser = authPart.slice(0, colonIndex);
+  const rawPass = authPart.slice(colonIndex + 1);
+
+  const user = encodeURIComponent(safeDecodeURIComponent(rawUser));
+  const pass = encodeURIComponent(safeDecodeURIComponent(rawPass));
+
+  return `${protocol}://${user}:${pass}@${hostPart}`;
+};
+
 export function getMailer() {
   if (cachedTransporter) return cachedTransporter;
 
@@ -26,7 +58,8 @@ export function getMailer() {
   );
 
   if (connectionUrl) {
-    cachedTransporter = nodemailer.createTransport(connectionUrl);
+    const sanitizedUrl = sanitizeConnectionUrl(connectionUrl);
+    cachedTransporter = nodemailer.createTransport(sanitizedUrl);
     return cachedTransporter;
   }
 
