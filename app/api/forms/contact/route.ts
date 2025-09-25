@@ -96,9 +96,17 @@ Not: Veriler yalnızca talebinizin değerlendirilmesi amacıyla işlenir ve sunu
 `;
 
     const transporter = getMailer();
+    const authUser = ((transporter as unknown as { options?: { auth?: { user?: string } } }).options?.auth?.user || "").trim();
+    const fromAddress = (process.env.MAIL_FROM || process.env.SMTP_USER || authUser || "").trim();
+    const toAddress = (process.env.MAIL_TO || process.env.SMTP_USER || authUser || "").trim();
+
+    if (!fromAddress || !toAddress) {
+      throw new Error("Mail alıcısı veya göndericisi yapılandırılmamış");
+    }
+
     await transporter.sendMail({
-      from: process.env.MAIL_FROM || process.env.SMTP_USER!,
-      to: process.env.MAIL_TO || process.env.SMTP_USER!,
+      from: fromAddress,
+      to: toAddress,
       subject,
       text,
       html,
