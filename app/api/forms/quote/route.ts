@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+
+import { getMailer } from "@/lib/mailer";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -11,15 +12,6 @@ const sanitize = (input: unknown, max = 2000) =>
   String(input ?? "").replace(/\r/g, "").replace(/</g, "&lt;").replace(/>/g, "&gt;").slice(0, max).trim();
 
 const required = (s?: string) => typeof s === "string" && s.trim().length > 0;
-
-function mailer() {
-  const host = process.env.SMTP_HOST!;
-  const port = Number(process.env.SMTP_PORT || 587);
-  const user = process.env.SMTP_USER!;
-  const pass = process.env.SMTP_PASS!;
-  if (!host || !user || !pass) throw new Error("SMTP credentials are missing");
-  return nodemailer.createTransport({ host, port, secure: false, auth: { user, pass } });
-}
 
 export async function POST(req: Request) {
   try {
@@ -109,7 +101,7 @@ User-Agent: ${ua}
 
 Not: Veriler yalnızca talebinizin değerlendirilmesi amacıyla işlenir ve sunucuda kalıcı saklanmaz.`;
 
-    const transporter = mailer();
+    const transporter = getMailer();
     await transporter.sendMail({
       from: process.env.MAIL_FROM || process.env.SMTP_USER!,
       to: process.env.MAIL_TO || process.env.SMTP_USER!,
