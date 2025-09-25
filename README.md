@@ -4,7 +4,7 @@ This repository contains the source code for the **AYK Proje Elektrik** company 
 
 ---
 
-## ✨ Features
+## Features
 - Responsive, modern UI with Tailwind CSS
 - Multisection layout (About, Services, Projects, Contact, etc.)
 - Dynamic forms (Contact & Quick Quote) with email delivery via SMTP
@@ -13,14 +13,14 @@ This repository contains the source code for the **AYK Proje Elektrik** company 
 
 ---
 
-## 📦 Requirements
+## Requirements
 - Node.js **18+** (LTS recommended)
 - npm or yarn package manager
 - SMTP account (for form email delivery)
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 Clone the repository:
 
@@ -61,7 +61,7 @@ npm run start
 
 ---
 
-## 🔑 Environment Variables
+## Environment Variables
 
 Environment variables are required for SMTP email functionality.  
 Use the `.env.example` file as a reference and create a `.env.production` file in the project root:
@@ -76,11 +76,11 @@ MAIL_TO=info@aykproje.com.tr
 MAIL_SUBJECT_PREFIX=[AYK]
 ```
 
-> ⚠️ Never commit `.env.production` to GitHub. It is already ignored via `.gitignore`.
+> Never commit `.env.production` to GitHub. It is already ignored via `.gitignore`.
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 app/             # Next.js App Router pages & API routes
@@ -91,7 +91,7 @@ public/          # Static assets (images, icons, etc.)
 
 ---
 
-## 📡 Deployment Notes
+## Deployment Notes
 - For Windows Server: run `npm run build && npm run start` via **NSSM** or **PM2**.  
 - Use IIS + ARR (Application Request Routing) for reverse proxy from ports 80/443 → 3000.  
 - On Linux servers, you can use **PM2** or **systemd** services.  
@@ -99,6 +99,6 @@ public/          # Static assets (images, icons, etc.)
 
 ---
 
-## 📄 License
+## License
 This project is proprietary to **AYK Proje Elektrik Ltd. Şti.**  
 All rights reserved. Unauthorized copying, modification, or distribution of this project, via any medium, is strictly prohibited.
