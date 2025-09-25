@@ -2,26 +2,58 @@
 import React from "react";
 
 export default function ContactForm() {
-  const [sent, setSent] = React.useState(false);
-  const onSubmit = (e: React.FormEvent) => { e.preventDefault(); setSent(true); };
-  if (sent) return <div className="p-4 rounded-xl bg-green-50 text-green-700">Teşekkürler! Talebiniz alındı. En kısa sürede dönüş yapacağız.</div>;
+  const [submitting, setSubmitting] = React.useState(false);
+  const [feedback, setFeedback] = React.useState<{ ok: boolean; message: string } | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const form = e.currentTarget;
+    const fd = new FormData(form);
+    const payload = Object.fromEntries(fd.entries());
+
+    setSubmitting(true);
+    setFeedback(null);
+
+    try {
+      const res = await fetch("/api/forms/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) {
+        const j = await res.json().catch(() => ({}));
+        const message = typeof j?.error === "string" && j.error.trim().length > 0 ? j.error : "Bir hata oluştu.";
+        setFeedback({ ok: false, message });
+        return;
+      }
+
+      form.reset();
+      setFeedback({ ok: true, message: "Mesajınız alındı. En kısa sürede dönüş yapacağız." });
+    } catch (error) {
+      setFeedback({ ok: false, message: "Sunucuya bağlanırken bir sorun oluştu. Lütfen tekrar deneyiniz." });
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
   return (
     <form
-      onSubmit={async (e) => {
-        e.preventDefault();
-        const fd = new FormData(e.currentTarget as HTMLFormElement);
-        const payload = Object.fromEntries(fd.entries());
-        const res = await fetch("/api/forms/contact", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload),
-        });
-        if (res.ok) { alert("Mesajınız alındı. En kısa sürede dönüş yapacağız."); (e.currentTarget as HTMLFormElement).reset(); }
-        else { const j = await res.json().catch(() => ({})); alert(j.error || "Bir hata oluştu."); }
-      }}
+      onSubmit={handleSubmit}
       className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4"
     >
+      {feedback && (
+        <div
+          className={`md:col-span-2 rounded-xl border px-4 py-3 text-sm ${
+            feedback.ok
+              ? "border-green-200 bg-green-50 text-green-700"
+              : "border-red-200 bg-red-50 text-red-600"
+          }`}
+        >
+          {feedback.message}
+        </div>
+      )}
       <input name="name" required className="px-4 py-3 rounded-xl bg-white text-[var(--ink)] outline-none" placeholder="Ad Soyad *" />
       <input name="contact" required className="px-4 py-3 rounded-xl bg-white text-[var(--ink)] outline-none" placeholder="E-posta / Telefon *" />
       <input name="topic" required className="md:col-span-2 px-4 py-3 rounded-xl bg-white text-[var(--ink)] outline-none" placeholder="Konu *" />
@@ -46,8 +78,12 @@ export default function ContactForm() {
         <span>Pazarlama/bilgilendirme amaçlı iletişim için <b>açık rıza</b> veriyorum. (İsteğe bağlı)</span>
       </label>
 
-      <button type="submit" className="md:col-span-2 px-5 py-3 rounded-xl bg-neutral-800 text-white font-medium hover:bg-[var(--brand)]">
-        Gönder
+      <button
+        type="submit"
+        disabled={submitting}
+        className="md:col-span-2 px-5 py-3 rounded-xl bg-neutral-800 text-white font-medium hover:bg-[var(--brand)] disabled:cursor-not-allowed disabled:bg-neutral-500"
+      >
+        {submitting ? "Gönderiliyor..." : "Gönder"}
       </button>
     </form>
   );
