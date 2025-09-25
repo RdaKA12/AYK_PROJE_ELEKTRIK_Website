@@ -67,7 +67,7 @@ export default function Header() {
                 <img
                   src="/assets/AYKlogo.webp"
                   alt="AYK Logo"
-                  className="h-20 w-auto"
+                  className="h-12 w-auto md:h-20"
                 />
               </Link>
 
