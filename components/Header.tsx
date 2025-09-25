@@ -52,93 +52,98 @@ export default function Header() {
     };
   }, [open]);
 
+  const compactHeader = (
+    <>
+      <div className="bg-neutral-900 text-neutral-100 text-xs sm:text-sm">
+        <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
+          <span className="hidden sm:flex items-center gap-1.5">
+            <Mail className="w-4 h-4" /> info@aykproje.com.tr
+          </span>
+          <span className="hidden md:flex items-center gap-1.5">
+            <MapPin className="w-4 h-4" /> Konuksever Mah. Emrah Cad. No:68/A,
+            Muratpaşa / Antalya
+          </span>
+        </div>
+      </div>
+
+      <div className="backdrop-blur bg-white/80 border-b border-neutral-200">
+        <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+          <Link href="/" className="flex items-center gap-3">
+            <img
+              src="/assets/AYKlogo.webp"
+              alt="AYK Logo"
+              className="h-12 w-auto"
+            />
+            <span className="font-semibold text-neutral-800">
+              AYK Proje Elektrik
+            </span>
+          </Link>
+
+          <nav className="hidden md:flex items-center gap-6 text-sm ml-auto">
+            {LINKS.map((l) => (
+              <NavLink key={l.href} href={l.href}>
+                {l.label}
+              </NavLink>
+            ))}
+          </nav>
+
+          <button
+            className="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl border border-neutral-300 bg-white"
+            aria-label="Menüyü aç"
+            onClick={() => setOpen(true)}
+          >
+            <Menu className="w-5 h-5" />
+          </button>
+        </div>
+      </div>
+    </>
+  );
+
   return (
     <header className="sticky top-0 z-40">
       {/* === ANASAYFA HEADER === */}
       {isHome ? (
         <>
-          {/* İnce boş üst bar */}
-          <div className="h-5 bg-neutral-900" />
+          <div className="hidden md:block">
+            <div className="h-5 bg-neutral-900" />
 
-          <div className="backdrop-blur bg-white/90 border-b border-neutral-200">
-            <div className="max-w-7xl mx-auto px-4 h-24 flex items-center justify-between">
-              {/* Logo tek başına */}
-              <Link href="/" className="flex items-center">
-                <img
-                  src="/assets/AYKlogo.webp"
-                  alt="AYK Logo"
-                  className="h-12 w-auto md:h-20"
-                />
-              </Link>
+            <div className="backdrop-blur bg-white/90 border-b border-neutral-200">
+              <div className="max-w-7xl mx-auto px-4 h-24 flex items-center justify-between">
+                {/* Logo tek başına */}
+                <Link href="/" className="flex items-center">
+                  <img
+                    src="/assets/AYKlogo.webp"
+                    alt="AYK Logo"
+                    className="h-12 w-auto md:h-20"
+                  />
+                </Link>
 
-              {/* Masaüstü menü */}
-              <nav className="hidden md:flex items-center gap-6 text-sm ml-auto">
-                {LINKS.map((l) => (
-                  <NavLink key={l.href} href={l.href}>
-                    {l.label}
-                  </NavLink>
-                ))}
-              </nav>
+                {/* Masaüstü menü */}
+                <nav className="hidden md:flex items-center gap-6 text-sm ml-auto">
+                  {LINKS.map((l) => (
+                    <NavLink key={l.href} href={l.href}>
+                      {l.label}
+                    </NavLink>
+                  ))}
+                </nav>
 
-              {/* Hamburger */}
-              <button
-                className="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl border border-neutral-300 bg-white"
-                aria-label="Menüyü aç"
-                onClick={() => setOpen(true)}
-              >
-                <Menu className="w-5 h-5" />
-              </button>
+                {/* Hamburger */}
+                <button
+                  className="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl border border-neutral-300 bg-white"
+                  aria-label="Menüyü aç"
+                  onClick={() => setOpen(true)}
+                >
+                  <Menu className="w-5 h-5" />
+                </button>
+              </div>
             </div>
           </div>
+
+          <div className="md:hidden">{compactHeader}</div>
         </>
       ) : (
         /* === DİĞER SAYFALAR HEADER === */
-        <>
-          {/* Üst bar yazılı */}
-          <div className="bg-neutral-900 text-neutral-100 text-xs sm:text-sm">
-            <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
-              <span className="hidden sm:flex items-center gap-1.5">
-                <Mail className="w-4 h-4" /> info@aykproje.com.tr
-              </span>
-              <span className="hidden md:flex items-center gap-1.5">
-                <MapPin className="w-4 h-4" /> Konuksever Mah. Emrah Cad. No:68/A,
-                Muratpaşa / Antalya
-              </span>
-            </div>
-          </div>
-
-          {/* Main bar */}
-          <div className="backdrop-blur bg-white/80 border-b border-neutral-200">
-            <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-              <Link href="/" className="flex items-center gap-3">
-                <img
-                  src="/assets/AYKlogo.webp"
-                  alt="AYK Logo"
-                  className="h-12 w-auto"
-                />
-                <span className="font-semibold text-neutral-800">
-                  AYK Proje Elektrik
-                </span>
-              </Link>
-
-              <nav className="hidden md:flex items-center gap-6 text-sm ml-auto">
-                {LINKS.map((l) => (
-                  <NavLink key={l.href} href={l.href}>
-                    {l.label}
-                  </NavLink>
-                ))}
-              </nav>
-
-              <button
-                className="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl border border-neutral-300 bg-white"
-                aria-label="Menüyü aç"
-                onClick={() => setOpen(true)}
-              >
-                <Menu className="w-5 h-5" />
-              </button>
-            </div>
-          </div>
-        </>
+        compactHeader
       )}
 
       {/* Mobil menü */}

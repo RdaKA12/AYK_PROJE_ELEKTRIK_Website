@@ -1,19 +1,13 @@
 "use client";
 import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
+import { motion } from "framer-motion";
 import { Phone, Mail, MapPin } from "lucide-react";
+import { projectsWithPhotos } from "@/data/projects";
 
 const ASSET_BASE = "/assets";
 
-const projects = [
-  { title: "Antalya Side Athena Tapınağı", desc: "Tarihi eserde elektrik altyapısı ve aydınlatma uygulamaları", img: `${ASSET_BASE}/side_athena/cover.webp` },
-  { title: "Antalya Konyaaltı Sahili", desc: "Sahil bandı aydınlatma ve enerji altyapısı", img: `${ASSET_BASE}/konyaalti_sahili/cover.webp` },
-  { title: "Antalya Hava Meydan Komutanlığı", desc: "Askeri tesis elektrik taahhüt ve modernizasyon çalışmaları", img: `${ASSET_BASE}/antalya_hava_meydan/cover.webp` },
-  { title: "Antalya Lider Tohum", desc: "25kW sera üstü çatı GES projesi", img: `${ASSET_BASE}/lider_tohum_ges/cover.webp` },
-  { title: "Ela Excellence Resort Hotel", desc: "Konaklama tesisinde elektrik uygulamaları", img: `${ASSET_BASE}/ela_otel/cover.webp` },
-  { title: "Gaziantep Kayna Sabun ve Pekmez Müzesi", desc: "Tarihi yapıda aydınlatma ve elektrik çözümleri", img: `${ASSET_BASE}/gaziantep_sabunhan/cover.webp` },
-  
-];
+const featuredProjects = projectsWithPhotos.slice(0, 6);
 
 export default function Page() {
   return (
@@ -162,7 +156,12 @@ export default function Page() {
           </motion.div>
           <div className="mt-8 flex flex-col sm:flex-row gap-3">
             <a href="#teklif" className="px-5 py-3 rounded-xl bg-neutral-800 text-white hover:bg-[var(--brand)]">Hızlı Teklif Al</a>
-            <a href="#projeler" className="px-5 py-3 rounded-xl border border-neutral-300 hover:border-[var(--brand)] hover:text-[var(--brand)]">Projeler</a>
+            <Link
+              href="/projeler"
+              className="px-5 py-3 rounded-xl border border-neutral-300 hover:border-[var(--brand)] hover:text-[var(--brand)]"
+            >
+              Projeler
+            </Link>
           </div>
 
           {/* özellikler şeridi (mevcut) */}
@@ -247,16 +246,24 @@ Deneyimli mühendislerimiz, teknisyenlerimiz ve teknik ekibimizle malzeme seçim
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-semibold border-l-4 border-[var(--brand)] pl-3">Seçili Projeler</h2>
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-            {projects.map((p) => (
-              <div key={p.title} className="group rounded-2xl overflow-hidden border border-neutral-200 bg-neutral-50 hover:border-[var(--brand)] transition-colors">
+            {featuredProjects.map((p) => (
+              <Link
+                key={p.slug}
+                href={`/projeler/${p.slug}`}
+                className="group block rounded-2xl overflow-hidden border border-neutral-200 bg-neutral-50 hover:border-[var(--brand)] transition-colors"
+              >
                 <div className="aspect-[16/10] overflow-hidden">
-                  <img src={p.img} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <img
+                    src={p.cover}
+                    alt={p.title}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
                 </div>
                 <div className="p-5">
                   <h3 className="font-medium">{p.title}</h3>
                   <p className="mt-1 text-sm text-neutral-600">{p.desc}</p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
