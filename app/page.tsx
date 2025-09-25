@@ -150,12 +150,16 @@ export default function Page() {
 
         {/* içerik */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 grid min-h-[85vh] content-center">
-          <motion.h1 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-4xl md:text-6xl font-bold leading-tight tracking-tight">
-            Güvenilir mühendislik, sürdürülebilir enerji, kalıcı değer.
-          </motion.h1>
-          <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1, duration: 0.6 }} className="mt-6 text-neutramt-6 text-neutral-700 font-semibold max-w-2xll-700 max-w-2xl">
-            Elektrikte 25+ yıllık deneyim, güçlü mühendislik ve anahtar teslim projeler.
-          </motion.p>
+          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight tracking-tight">
+              Güvenilir mühendislik, sürdürülebilir enerji, kalıcı değer.
+            </h1>
+          </motion.div>
+          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1, duration: 0.6 }}>
+            <p className="mt-6 text-neutramt-6 text-neutral-700 font-semibold max-w-2xll-700 max-w-2xl">
+              Elektrikte 25+ yıllık deneyim, güçlü mühendislik ve anahtar teslim projeler.
+            </p>
+          </motion.div>
           <div className="mt-8 flex flex-col sm:flex-row gap-3">
             <a href="#teklif" className="px-5 py-3 rounded-xl bg-neutral-800 text-white hover:bg-[var(--brand)]">Hızlı Teklif Al</a>
             <a href="#projeler" className="px-5 py-3 rounded-xl border border-neutral-300 hover:border-[var(--brand)] hover:text-[var(--brand)]">Projeler</a>
