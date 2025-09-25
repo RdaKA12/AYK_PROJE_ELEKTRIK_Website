@@ -1,6 +1,7 @@
 import Container from "@/components/Container";
 import { services } from "@/data/services";
 import { Wrench, Cable, Sun, Package, ListChecks, CircuitBoard } from "lucide-react";
+import type { ReactElement } from "react";
 import Link from "next/link";
 
 export const metadata = {
@@ -9,7 +10,7 @@ export const metadata = {
     "Proje danışmanlık & mühendislik, elektrik elektronik taahhüt, elektrik malzemesi satışı, zayıf akım sistemleri, güneş enerji sistemleri ve bakım & servis.",
 };
 
-const iconMap: Record<string, JSX.Element> = {
+const iconMap: Record<string, ReactElement> = {
   "proje-danismanlik-muhendislik": <ListChecks className="w-6 h-6 text-[var(--brand)]" />,
   "elektrik-elektronik-taahhut": <Cable className="w-6 h-6 text-[var(--brand)]" />,
   "elektrik-malzemesi-satisi": <Package className="w-6 h-6 text-[var(--brand)]" />,
