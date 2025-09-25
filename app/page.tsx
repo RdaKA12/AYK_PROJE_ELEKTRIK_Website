@@ -267,21 +267,63 @@ Deneyimli mühendislerimiz, teknisyenlerimiz ve teknik ekibimizle malzeme seçim
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-semibold">Projeniz için hızlı bir keşif ve fiyat teklifi alın</h2>
           <p className="mt-2 text-neutral-300">Temel bilgileri bırakın; aynı gün dönüş yapalım.</p>
-          <form
-            onSubmit={async (e) => {
-              e.preventDefault();
-              const fd = new FormData(e.currentTarget as HTMLFormElement);
-              const payload = Object.fromEntries(fd.entries());
-              const res = await fetch("/api/forms/quote", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(payload),
-              });
-              if (res.ok) { alert("Talebiniz alındı. En kısa sürede dönüş yapacağız."); (e.currentTarget as HTMLFormElement).reset(); }
-              else { const j = await res.json().catch(() => ({})); alert(j.error || "Bir hata oluştu."); }
-            }}
-            className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4"
-          >
+          <QuoteForm />
+        </div>
+      </section>
+    </div>
+  );
+}
+
+function QuoteForm() {
+  const [submitting, setSubmitting] = React.useState(false);
+  const [feedback, setFeedback] = React.useState<{ ok: boolean; message: string } | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const form = e.currentTarget;
+    const fd = new FormData(form);
+    const payload = Object.fromEntries(fd.entries());
+
+    setSubmitting(true);
+    setFeedback(null);
+
+    try {
+      const res = await fetch("/api/forms/quote", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) {
+        const j = await res.json().catch(() => ({}));
+        const message = typeof j?.error === "string" && j.error.trim().length > 0 ? j.error : "Bir hata oluştu.";
+        setFeedback({ ok: false, message });
+        return;
+      }
+
+      form.reset();
+      setFeedback({ ok: true, message: "Talebiniz alındı. En kısa sürede dönüş yapacağız." });
+    } catch (error) {
+      setFeedback({ ok: false, message: "Sunucuya bağlanırken bir sorun oluştu. Lütfen tekrar deneyiniz." });
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
+  return (
+    <form onSubmit={handleSubmit} className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+      {feedback && (
+        <div
+          className={`md:col-span-2 rounded-xl border px-4 py-3 text-sm ${
+            feedback.ok
+              ? "border-green-200 bg-green-50 text-green-700"
+              : "border-red-200 bg-red-50 text-red-600"
+          }`}
+        >
+          {feedback.message}
+        </div>
+      )}
             <input name="name" required className="px-4 py-3 rounded-xl bg-white text-[var(--ink)] outline-none" placeholder="Ad Soyad *" />
             <input name="contact" required className="px-4 py-3 rounded-xl bg-white text-[var(--ink)] outline-none" placeholder="E-posta / Telefon *" />
             <input name="projectType" required className="md:col-span-2 px-4 py-3 rounded-xl bg-white text-[var(--ink)] outline-none" placeholder="Proje türü (Malzeme Alımı, Taahhüt, GES, Bakım...) *" />
@@ -310,12 +352,13 @@ Deneyimli mühendislerimiz, teknisyenlerimiz ve teknik ekibimizle malzeme seçim
               <span>Pazarlama/bilgilendirme amaçlı iletişim için <b>açık rıza</b> veriyorum. (İsteğe bağlı)</span>
             </label>
 
-            <button className="md:col-span-2 px-5 py-3 rounded-xl bg-neutral-800 text-white font-medium hover:bg-[var(--brand)]" type="submit">
-              Teklif Talep Et
-            </button>
-          </form>
-        </div>
-      </section>
-    </div>
+      <button
+        className="md:col-span-2 px-5 py-3 rounded-xl bg-neutral-800 text-white font-medium hover:bg-[var(--brand)] disabled:cursor-not-allowed disabled:bg-neutral-500"
+        type="submit"
+        disabled={submitting}
+      >
+        {submitting ? "Gönderiliyor..." : "Teklif Talep Et"}
+      </button>
+    </form>
   );
 }
