@@ -170,7 +170,7 @@ export default function Page() {
           <div className="mt-10 overflow-hidden">
             <div className="flex gap-4 whitespace-nowrap animate-[featureScroll_30s_linear_infinite]">
               {[
-                "30+ yıl deneyim",
+                "25+ yıl deneyim",
                 "50+ büyük ölçekli proje",
                 "Ulusal & uluslararası referanslar",
                 "Zamanında teslim ve servis",
@@ -178,7 +178,7 @@ export default function Page() {
                 "Etkili ve uygun fiyat politikası",
                 "Yüksek kalite standartları",
                 "Kapsamlı çözüm ortaklığı",
-                "30+ yıl deneyim",
+                "25+ yıl deneyim",
                 "50+ büyük ölçekli proje",
                 "Ulusal & uluslararası referanslar",
                 "Zamanında teslim ve servis",
@@ -186,7 +186,7 @@ export default function Page() {
                 "Etkili ve uygun fiyat politikası",
                 "Yüksek kalite standartları",
                 "Kapsamlı çözüm ortaklığı",
-                "30+ yıl deneyim",
+                "25+ yıl deneyim",
                 "50+ büyük ölçekli proje",
                 "Ulusal & uluslararası referanslar",
                 "Zamanında teslim ve servis",
@@ -194,7 +194,7 @@ export default function Page() {
                 "Etkili ve uygun fiyat politikası",
                 "Yüksek kalite standartları",
                 "Kapsamlı çözüm ortaklığı",
-                "30+ yıl deneyim",
+                "25+ yıl deneyim",
                 "50+ büyük ölçekli proje",
                 "Ulusal & uluslararası referanslar",
                 "Zamanında teslim ve servis",
