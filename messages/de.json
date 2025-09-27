@@ -1,4 +1,11 @@
 {
+  "layout": {
+    "meta": {
+      "title": "AYK Projekt Elektrik",
+      "template": "%s | AYK Projekt Elektrik",
+      "description": "Über 25 Jahre Erfahrung in der Elektrotechnik, starkes Engineering und schlüsselfertige Projekte."
+    }
+  },
   "header": {
     "brand": "AYK Projekt Elektrik",
     "nav": {

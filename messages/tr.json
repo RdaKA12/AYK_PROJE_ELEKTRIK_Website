@@ -1,4 +1,11 @@
 {
+  "layout": {
+    "meta": {
+      "title": "AYK Proje Elektrik",
+      "template": "%s | AYK Proje Elektrik",
+      "description": "Elektrikte 25+ yıl deneyim, güçlü mühendislik ve anahtar teslim projeler."
+    }
+  },
   "header": {
     "brand": "AYK Proje Elektrik",
     "nav": {

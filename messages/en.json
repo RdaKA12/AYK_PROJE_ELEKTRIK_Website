@@ -1,4 +1,11 @@
 {
+  "layout": {
+    "meta": {
+      "title": "AYK Project Electric",
+      "template": "%s | AYK Project Electric",
+      "description": "25+ years of experience in electricity, solid engineering and turnkey projects."
+    }
+  },
   "header": {
     "brand": "AYK Project Electric",
     "nav": {
