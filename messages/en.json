@@ -23,6 +23,17 @@
     "aria": { "menu_open": "Open menu", "menu_close": "Close menu" }
   },
 
+  "languageSwitcher": {
+    "label": "Language selection",
+    "languages": {
+      "tr": "Turkish",
+      "en": "English",
+      "de": "German",
+      "ru": "Russian",
+      "ar": "Arabic"
+    }
+  },
+
   "footer": {
     "company_full": "AYK Project Engineering Electric Industry and Trade Ltd. Co.",
     "rights": "All rights reserved.",

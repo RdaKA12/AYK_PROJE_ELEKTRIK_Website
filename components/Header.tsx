@@ -5,6 +5,8 @@ import { usePathname } from "next/navigation";
 import { Menu, X, Mail, MapPin } from "lucide-react";
 import { useTranslations } from "next-intl";
 
+import LanguageSwitcher from "./LanguageSwitcher";
+
 function NavLink({
   href,
   children,
@@ -182,6 +184,10 @@ export default function Header() {
                 </NavLink>
               ))}
             </nav>
+
+            <div className="border-t border-neutral-200 px-4 py-3">
+              <LanguageSwitcher className="justify-start" />
+            </div>
           </div>
         </div>
       )}
