@@ -24,7 +24,7 @@ function splitCategoryYear(cat: string): { cat: string; year: string } {
 }
 
 export default async function Page() {
-  const t = await getTranslations({ namespace: "projects" });
+  const t = await getTranslations("projects");
   const cardMessages = t.raw("items") as Record<string, { title: string; desc: string }>;
   return (
     <section className="py-10 md:py-14">

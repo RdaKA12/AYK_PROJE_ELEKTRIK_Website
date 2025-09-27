@@ -14,7 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function Page() {
-  const t = await getTranslations({ namespace: "contact" });
+  const t = await getTranslations("contact");
   const socialLinks = t.raw("social.links") as Record<string, string>;
   return (
     <section className="py-10 md:py-14">

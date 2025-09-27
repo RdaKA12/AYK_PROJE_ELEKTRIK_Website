@@ -14,7 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function Page() {
-  const t = await getTranslations({ namespace: "about" });
+  const t = await getTranslations("about");
   const statsMessages = t.raw("stats") as Record<string, string>;
   const whyItems = t.raw("why.items") as string[];
   const valuesItems = t.raw("values.items") as string[];

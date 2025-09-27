@@ -25,7 +25,7 @@ const iconMap: Record<string, ReactElement> = {
 };
 
 export default async function Page() {
-  const t = await getTranslations({ namespace: "services" });
+  const t = await getTranslations("services");
   const cardMessages = t.raw("cards") as Record<
     string,
     { title: string; desc: string; bullets?: string[] }
