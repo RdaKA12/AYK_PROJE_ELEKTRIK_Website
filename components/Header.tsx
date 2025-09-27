@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link, usePathname } from "@/lib/i18n/routing";
 import { Menu, X, Mail, MapPin } from "lucide-react";
 import { useTranslations } from "next-intl";
 

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Container from "@/components/Container";
-import Link from "next/link";
+import { Link } from "@/lib/i18n/routing";
 import { Target, Handshake, ShieldCheck, Leaf } from "lucide-react";
 import { getTranslations, getLocale } from "next-intl/server";
 

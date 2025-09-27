@@ -3,7 +3,7 @@ import Container from "@/components/Container";
 import { services } from "@/data/services";
 import { Wrench, Cable, Sun, Package, ListChecks, CircuitBoard } from "lucide-react";
 import type { ReactElement } from "react";
-import Link from "next/link";
+import { Link } from "@/lib/i18n/routing";
 import { getTranslations, getLocale } from "next-intl/server";
 
 export async function generateMetadata(): Promise<Metadata> {

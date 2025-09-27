@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/lib/i18n/routing";
 import { Project } from "@/data/projects";
 
 export default function ProjectCard({ p }: { p: Project }) {
