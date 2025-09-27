@@ -12,9 +12,17 @@ export async function generateStaticParams() {
 export const dynamicParams = false;
 
 export default async function Page({ params }: { params: { slug: string } }) {
-  const t = await getTranslations({ namespace: "projects_detail" });
+  const [tDetail, tProjects] = await Promise.all([
+    getTranslations({ namespace: "projects_detail" }),
+    getTranslations({ namespace: "projects" }),
+  ]);
   const p = projectsWithPhotos.find((x) => x.slug === params.slug);
   if (!p) return notFound();
+
+  const projectContent = (tProjects.raw("items") as Record<string, { title: string; desc: string }>)[p.slug] ?? {
+    title: p.slug,
+    desc: "",
+  };
 
   // hero için görseller: cover + gallery
   const heroImages = [p.cover, ...(p.gallery ?? [])];
@@ -29,27 +37,27 @@ export default async function Page({ params }: { params: { slug: string } }) {
         {/* Breadcrumbs */}
         <div className="text-xs text-neutral-600">
           <Link href="/projeler" className="hover:text-[var(--brand)]">
-            {t("breadcrumbs.projects")}
+            {tDetail("breadcrumbs.projects")}
           </Link>
           <span className="mx-2">/</span>
-          <span className="text-neutral-800">{p.title}</span>
+          <span className="text-neutral-800">{projectContent.title}</span>
         </div>
 
         {/* Başlık */}
         <h1 className="mt-2 text-3xl md:text-4xl font-semibold border-l-4 border-[var(--brand)] pl-3">
-          {p.title}
+          {projectContent.title}
         </h1>
-        <p className="mt-2 text-neutral-700 text-[15px]">{p.desc}</p>
+        <p className="mt-2 text-neutral-700 text-[15px]">{projectContent.desc}</p>
 
         {/* HERO SLIDER */}
         <div className="mt-6">
-          <ProjectHero title={p.title} images={heroImages} />
+          <ProjectHero title={projectContent.title} images={heroImages} />
         </div>
 
         {/* Kare galeri */}
         {allGallery.length > 0 && (
           <>
-            <h2 className="mt-8 font-medium text-lg">{t("gallery_title")}</h2>
+            <h2 className="mt-8 font-medium text-lg">{tDetail("gallery_title")}</h2>
             <div className="mt-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {allGallery.map((src, i) => (
                 <a
@@ -62,7 +70,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
                   <div className="relative w-full" style={{ paddingTop: "100%" }}>
                     <Image
                       src={src}
-                      alt={`${p.title} - ${i + 1}`}
+                      alt={`${projectContent.title} - ${i + 1}`}
                       fill
                       className="object-cover"
                       sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 20vw"
@@ -77,7 +85,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
         {/* Geri */}
         <div className="mt-10">
           <Link href="/projeler" className="text-sm hover:text-[var(--brand)]">
-            ← {t("back")}
+            ← {tDetail("back")}
           </Link>
         </div>
       </Container>

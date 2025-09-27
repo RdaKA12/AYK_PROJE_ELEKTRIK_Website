@@ -62,7 +62,7 @@
       "items": {
         "side_athena": { "title": "Antalya Side Athena Tapınağı", "desc": "Tarihi eserde elektrik altyapısı ve aydınlatma uygulamaları" },
         "konyaalti_sahili": { "title": "Antalya Konyaaltı Sahili", "desc": "Sahil bandı aydınlatma ve enerji altyapısı" },
-        "hava_meydan": { "title": "Antalya Hava Meydan Komutanlığı", "desc": "Askeri tesis elektrik taahhüt ve modernizasyon çalışmaları" },
+        "antalya_hava_meydan": { "title": "Antalya Hava Meydan Komutanlığı", "desc": "Askeri tesis elektrik taahhüt ve modernizasyon çalışmaları" },
         "lider_tohum_ges": { "title": "Antalya Lider Tohum", "desc": "25kW sera üstü çatı GES projesi" },
         "ela_excellence": { "title": "Ela Excellence Resort Hotel", "desc": "Konaklama tesisinde elektrik uygulamaları" },
         "gaziantep_sabunhan": { "title": "Gaziantep Kayna Sabun ve Pekmez Müzesi", "desc": "Tarihi yapıda aydınlatma ve elektrik çözümleri" }
@@ -259,6 +259,52 @@
     },
     "title": "Projeler",
     "intro": "Aşağıda fotoğraflarla öne çıkardığımız projelerimizi ve kapsamlı referans listemizi bulabilirsiniz.",
+    "items": {
+      "side_athena": {
+        "title": "Antalya Side Athena Tapınağı",
+        "desc": "Tarihi eserde elektrik altyapısı ve aydınlatma uygulamaları"
+      },
+      "konyaalti_sahili": {
+        "title": "Antalya Konyaaltı Sahili",
+        "desc": "Sahil bandı aydınlatma ve enerji altyapısı"
+      },
+      "antalya_hava_meydan": {
+        "title": "Antalya Hava Meydan Komutanlığı",
+        "desc": "Askeri tesis elektrik taahhüt ve modernizasyon çalışmaları"
+      },
+      "lider_tohum_ges": {
+        "title": "Antalya Lider Tohum",
+        "desc": "25kW sera üstü çatı GES projesi"
+      },
+      "ela_excellence": {
+        "title": "Ela Excellence Resort Hotel",
+        "desc": "Konaklama tesisinde elektrik uygulamaları"
+      },
+      "hidirlik_kulesi": {
+        "title": "Antalya Hıdırlık Kulesi",
+        "desc": "Renovasyon projesi aydınlatma & elektrik"
+      },
+      "gaziantep_sabunhan": {
+        "title": "Gaziantep Kayna Sabun ve Pekmez Müzesi",
+        "desc": "Tarihi yapıda aydınlatma ve elektrik çözümleri"
+      },
+      "bodrum_no81_otel": {
+        "title": "Bodrum No81 Otel",
+        "desc": "98 odada havuz panoları ve elektrik işleri"
+      },
+      "mersin_onkoloji_hastanesi": {
+        "title": "Mersin Üniversitesi Onkoloji Hastanesi",
+        "desc": "252 yatak – elektrik & mekanik taahhüt"
+      },
+      "side_antik_hamam": {
+        "title": "Antalya Side Antik Kent Hamam",
+        "desc": "Renovasyon projesi anahtar teslimi"
+      },
+      "antalya_jj": {
+        "title": "Antalya Jolly Joker (JJ Pub)",
+        "desc": "Elektrik taahhüt & pano işleri"
+      }
+    },
     "references": {
       "title": "Referanslarımız",
       "subtitle": "2006–2025 arası tamamlanan işlerimizden seçki."

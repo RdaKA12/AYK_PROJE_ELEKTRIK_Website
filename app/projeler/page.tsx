@@ -25,6 +25,7 @@ function splitCategoryYear(cat: string): { cat: string; year: string } {
 
 export default async function Page() {
   const t = await getTranslations({ namespace: "projects" });
+  const cardMessages = t.raw("items") as Record<string, { title: string; desc: string }>;
   return (
     <section className="py-10 md:py-14">
       <Container>
@@ -35,29 +36,32 @@ export default async function Page() {
 
         {/* Fotoğraflı projeler */}
         <div className="mt-8 grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-          {projectsWithPhotos.map((p) => (
-            <Link
-              key={p.slug}
-              href={`/projeler/${p.slug}`}
-              className="group rounded-2xl overflow-hidden border border-neutral-200 bg-neutral-50 hover:border-[var(--brand)] transition-colors"
-            >
-              <div className="aspect-[16/10] overflow-hidden">
-                <Image
-                  src={p.cover}
-                  alt={p.title}
-                  width={800}
-                  height={500}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  priority={false}
-                />
-              </div>
-              <div className="p-5">
-                <h3 className="font-medium">{p.title}</h3>
-                <p className="mt-1 text-sm text-neutral-600">{p.desc}</p>
-              </div>
-            </Link>
-          ))}
+          {projectsWithPhotos.map((p) => {
+            const content = cardMessages[p.slug] ?? { title: p.slug, desc: "" };
+            return (
+              <Link
+                key={p.slug}
+                href={`/projeler/${p.slug}`}
+                className="group rounded-2xl overflow-hidden border border-neutral-200 bg-neutral-50 hover:border-[var(--brand)] transition-colors"
+              >
+                <div className="aspect-[16/10] overflow-hidden">
+                  <Image
+                    src={p.cover}
+                    alt={content.title}
+                    width={800}
+                    height={500}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    priority={false}
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="font-medium">{content.title}</h3>
+                  <p className="mt-1 text-sm text-neutral-600">{content.desc}</p>
+                </div>
+              </Link>
+            );
+          })}
         </div>
 
         {/* Referans tablosu */}
