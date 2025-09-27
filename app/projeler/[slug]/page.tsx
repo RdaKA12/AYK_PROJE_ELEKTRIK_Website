@@ -1,7 +1,7 @@
 import Container from "@/components/Container";
 import { notFound } from "next/navigation";
 import { projectsWithPhotos } from "@/data/projects";
-import Link from "next/link";
+import { Link } from "@/lib/i18n/routing";
 import ProjectHero from "@/components/ProjectHero";
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Container from "@/components/Container";
-import Link from "next/link";
+import { Link } from "@/lib/i18n/routing";
 import { projectsWithPhotos } from "@/data/projects";
 import { references } from "@/data/references";
 import Image from "next/image";
