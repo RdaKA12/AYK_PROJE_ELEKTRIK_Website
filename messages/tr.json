@@ -316,7 +316,12 @@
   "projects_detail": {
     "breadcrumbs": { "projects": "Projeler" },
     "gallery_title": "Fotoğraf Galerisi",
-    "back": "Tüm projelere geri dön"
+    "back": "Tüm projelere geri dön",
+    "hero": {
+      "prev": "Önceki",
+      "next": "Sonraki",
+      "goto": "{index}. görsele git"
+    }
   },
 
   "contact": {
