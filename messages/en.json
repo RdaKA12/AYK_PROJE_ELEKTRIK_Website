@@ -316,7 +316,12 @@
   "projects_detail": {
     "breadcrumbs": { "projects": "Projects" },
     "gallery_title": "Photo Gallery",
-    "back": "Back to all projects"
+    "back": "Back to all projects",
+    "hero": {
+      "prev": "Previous image",
+      "next": "Next image",
+      "goto": "Go to image {index}"
+    }
   },
 
   "contact": {
