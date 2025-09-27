@@ -89,7 +89,7 @@
         "type": "Projekttyp (Materialkauf, Vertragsarbeit, PV, Wartung...) *",
         "message": "Kurze Beschreibung *"
       },
-      "consent_apply_html": "Ich habe den <a href=\"aydinlatma-metni\" class=\"text-[var(--brand)] font-medium\">Datenschutzhinweis</a> gelesen und <b>stimme zu</b>, dass meine personenbezogenen Daten zum Zweck der Bearbeitung meiner Anfrage verarbeitet werden.",
+      "consent_apply_html": "Ich habe den <a>Datenschutzhinweis</a> gelesen und <b>stimme zu</b>, dass meine personenbezogenen Daten zum Zweck der Bearbeitung meiner Anfrage verarbeitet werden.",
       "consent_contact": "Ich stimme zu, dass ich bezüglich meines Projekts kontaktiert werde.",
       "consent_marketing": "Ich gebe <b>ausdrückliche Zustimmung</b> für Marketing-/Informationszwecke. (Optional)",
       "submit": "Angebot anfordern",
@@ -108,7 +108,7 @@
       "message": "Ihre Nachricht *"
     },
     "consents": {
-      "info_html": "Ich habe den <a href=\"/aydinlatma-metni\" class=\"text-[var(--brand)] font-medium\">Datenschutzhinweis</a> gelesen und <b>stimme zu</b>, dass meine personenbezogenen Daten zur Beantwortung meiner Nachricht verarbeitet werden.",
+      "info_html": "Ich habe den <a>Datenschutzhinweis</a> gelesen und <b>stimme zu</b>, dass meine personenbezogenen Daten zur Beantwortung meiner Nachricht verarbeitet werden.",
       "contact": "Ich stimme zu, dass <b>mit mir Kontakt aufgenommen wird</b> in Bezug auf meine Anfrage/Nachricht.",
       "marketing": "Ich gebe <b>ausdrückliche Zustimmung</b>, Marketing-/Informationsmitteilungen zu erhalten. (Optional)"
     },

@@ -89,7 +89,7 @@
         "type": "Proje türü (Malzeme Alımı, Taahhüt, GES, Bakım...) *",
         "message": "Kısa açıklama *"
       },
-      "consent_apply_html": "<a href=\"aydinlatma-metni\" class=\"text-[var(--brand)] font-medium\">Aydınlatma Metni</a>’ni okudum; başvurumun değerlendirilmesi amacıyla kişisel verilerimin işlenmesine <b>onay veriyorum</b>.",
+      "consent_apply_html": "<a>Aydınlatma Metni</a>’ni okudum; başvurumun değerlendirilmesi amacıyla kişisel verilerimin işlenmesine <b>onay veriyorum</b>.",
       "consent_contact": "Projem hakkında tarafımla iletişime geçilmesine onay veriyorum.",
       "consent_marketing": "Pazarlama/bilgilendirme amaçlı iletişim için <b>açık rıza</b> veriyorum. (İsteğe bağlı)",
       "submit": "Teklif Talep Et",
@@ -108,7 +108,7 @@
       "message": "Mesajınız *"
     },
     "consents": {
-      "info_html": "<a href=\"/aydinlatma-metni\" class=\"text-[var(--brand)] font-medium\">Aydınlatma Metni</a>’ni okudum; mesajımın yanıtlanması amacıyla kişisel verilerimin işlenmesine <b>onay veriyorum</b>.",
+      "info_html": "<a>Aydınlatma Metni</a>’ni okudum; mesajımın yanıtlanması amacıyla kişisel verilerimin işlenmesine <b>onay veriyorum</b>.",
       "contact": "Talebim/mesajım hakkında <b>tarafımla iletişime geçilmesine</b> onay veriyorum.",
       "marketing": "Pazarlama/bilgilendirme amaçlı iletişim için <b>açık rıza</b> veriyorum. (İsteğe bağlı)"
     },

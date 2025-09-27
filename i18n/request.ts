@@ -1,6 +1,6 @@
 import {getRequestConfig} from 'next-intl/server';
 
-import {locales, type Locale} from '@/lib/i18n/config';
+import {defaultLocale, locales, type Locale} from '@/lib/i18n/config';
 
 const loadMessages = async (locale: Locale) => {
   switch (locale) {
@@ -19,12 +19,12 @@ const loadMessages = async (locale: Locale) => {
   }
 };
 
-export default getRequestConfig(async ({locale}) => {
-  if (!locales.includes(locale as Locale)) {
-    throw new Error(`Unsupported locale: ${locale}`);
-  }
+export default getRequestConfig(async ({ locale }) => {
+  const resolved = locale ?? defaultLocale;
+  const activeLocale = locales.includes(resolved as Locale) ? (resolved as Locale) : defaultLocale;
 
   return {
-    messages: await loadMessages(locale as Locale)
+    locale: activeLocale,
+    messages: await loadMessages(activeLocale),
   };
 });

@@ -89,7 +89,7 @@
         "type": "Project type (Material Purchase, Contracting, PV, Maintenance...) *",
         "message": "Short description *"
       },
-      "consent_apply_html": "I have read the <a href=\"aydinlatma-metni\" class=\"text-[var(--brand)] font-medium\">Privacy Notice</a> and <b>I consent</b> to the processing of my personal data for the purpose of evaluating my application.",
+      "consent_apply_html": "I have read the <a>Privacy Notice</a> and <b>I consent</b> to the processing of my personal data for the purpose of evaluating my application.",
       "consent_contact": "I consent to being contacted about my project.",
       "consent_marketing": "I give <b>explicit consent</b> for marketing/information communication. (Optional)",
       "submit": "Request Quote",
@@ -108,7 +108,7 @@
       "message": "Your message *"
     },
     "consents": {
-      "info_html": "I have read the <a href=\"/aydinlatma-metni\" class=\"text-[var(--brand)] font-medium\">Privacy Notice</a> and I <b>consent</b> to the processing of my personal data for the purpose of responding to my message.",
+      "info_html": "I have read the <a>Privacy Notice</a> and I <b>consent</b> to the processing of my personal data for the purpose of responding to my message.",
       "contact": "I consent to <b>being contacted</b> regarding my request/message.",
       "marketing": "I give <b>explicit consent</b> to receive marketing/information communications. (Optional)"
     },
