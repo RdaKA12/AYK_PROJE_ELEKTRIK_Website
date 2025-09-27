@@ -1,4 +1,11 @@
 {
+  "layout": {
+    "meta": {
+      "title": "AYK Proje Elektrik",
+      "template": "%s | AYK Proje Elektrik",
+      "description": "Elektrikte 25+ yıl deneyim, güçlü mühendislik ve anahtar teslim projeler."
+    }
+  },
   "header": {
     "brand": "AYK Proje Elektrik",
     "nav": {
@@ -14,6 +21,17 @@
     },
     "menu": { "title": "Menü" },
     "aria": { "menu_open": "Menüyü aç", "menu_close": "Menüyü kapat" }
+  },
+
+  "languageSwitcher": {
+    "label": "Dil seçenekleri",
+    "languages": {
+      "tr": "Türkçe",
+      "en": "English",
+      "de": "Deutsch",
+      "ru": "Русский",
+      "ar": "العربية"
+    }
   },
 
   "footer": {
@@ -55,9 +73,10 @@
       "items": {
         "side_athena": { "title": "Antalya Side Athena Tapınağı", "desc": "Tarihi eserde elektrik altyapısı ve aydınlatma uygulamaları" },
         "konyaalti_sahili": { "title": "Antalya Konyaaltı Sahili", "desc": "Sahil bandı aydınlatma ve enerji altyapısı" },
-        "hava_meydan": { "title": "Antalya Hava Meydan Komutanlığı", "desc": "Askeri tesis elektrik taahhüt ve modernizasyon çalışmaları" },
+        "antalya_hava_meydan": { "title": "Antalya Hava Meydan Komutanlığı", "desc": "Askeri tesis elektrik taahhüt ve modernizasyon çalışmaları" },
         "lider_tohum_ges": { "title": "Antalya Lider Tohum", "desc": "25kW sera üstü çatı GES projesi" },
         "ela_excellence": { "title": "Ela Excellence Resort Hotel", "desc": "Konaklama tesisinde elektrik uygulamaları" },
+        "hidirlik_kulesi": { "title": "Antalya Hıdırlık Kulesi", "desc": "Renovasyon projesi aydınlatma & elektrik" },
         "gaziantep_sabunhan": { "title": "Gaziantep Kayna Sabun ve Pekmez Müzesi", "desc": "Tarihi yapıda aydınlatma ve elektrik çözümleri" }
       }
     },
@@ -74,8 +93,33 @@
       "consent_contact": "Projem hakkında tarafımla iletişime geçilmesine onay veriyorum.",
       "consent_marketing": "Pazarlama/bilgilendirme amaçlı iletişim için <b>açık rıza</b> veriyorum. (İsteğe bağlı)",
       "submit": "Teklif Talep Et",
+      "submit_loading": "Gönderiliyor...",
       "alert_ok": "Talebiniz alındı. En kısa sürede dönüş yapacağız.",
-      "alert_err": "Bir hata oluştu."
+      "alert_err": "Bir hata oluştu.",
+      "network_error": "Sunucuya bağlanırken bir sorun oluştu. Lütfen tekrar deneyiniz."
+    }
+  },
+
+  "contactForm": {
+    "fields": {
+      "name": "Ad Soyad *",
+      "contact": "E-posta / Telefon *",
+      "topic": "Konu *",
+      "message": "Mesajınız *"
+    },
+    "consents": {
+      "info_html": "<a href=\"/aydinlatma-metni\" class=\"text-[var(--brand)] font-medium\">Aydınlatma Metni</a>’ni okudum; mesajımın yanıtlanması amacıyla kişisel verilerimin işlenmesine <b>onay veriyorum</b>.",
+      "contact": "Talebim/mesajım hakkında <b>tarafımla iletişime geçilmesine</b> onay veriyorum.",
+      "marketing": "Pazarlama/bilgilendirme amaçlı iletişim için <b>açık rıza</b> veriyorum. (İsteğe bağlı)"
+    },
+    "submit": {
+      "default": "Gönder",
+      "loading": "Gönderiliyor..."
+    },
+    "feedback": {
+      "success": "Mesajınız alındı. En kısa sürede dönüş yapacağız.",
+      "error": "Bir hata oluştu.",
+      "network": "Sunucuya bağlanırken bir sorun oluştu. Lütfen tekrar deneyiniz."
     }
   },
 
@@ -227,6 +271,52 @@
     },
     "title": "Projeler",
     "intro": "Aşağıda fotoğraflarla öne çıkardığımız projelerimizi ve kapsamlı referans listemizi bulabilirsiniz.",
+    "items": {
+      "side_athena": {
+        "title": "Antalya Side Athena Tapınağı",
+        "desc": "Tarihi eserde elektrik altyapısı ve aydınlatma uygulamaları"
+      },
+      "konyaalti_sahili": {
+        "title": "Antalya Konyaaltı Sahili",
+        "desc": "Sahil bandı aydınlatma ve enerji altyapısı"
+      },
+      "antalya_hava_meydan": {
+        "title": "Antalya Hava Meydan Komutanlığı",
+        "desc": "Askeri tesis elektrik taahhüt ve modernizasyon çalışmaları"
+      },
+      "lider_tohum_ges": {
+        "title": "Antalya Lider Tohum",
+        "desc": "25kW sera üstü çatı GES projesi"
+      },
+      "ela_excellence": {
+        "title": "Ela Excellence Resort Hotel",
+        "desc": "Konaklama tesisinde elektrik uygulamaları"
+      },
+      "hidirlik_kulesi": {
+        "title": "Antalya Hıdırlık Kulesi",
+        "desc": "Renovasyon projesi aydınlatma & elektrik"
+      },
+      "gaziantep_sabunhan": {
+        "title": "Gaziantep Kayna Sabun ve Pekmez Müzesi",
+        "desc": "Tarihi yapıda aydınlatma ve elektrik çözümleri"
+      },
+      "bodrum_no81_otel": {
+        "title": "Bodrum No81 Otel",
+        "desc": "98 odada havuz panoları ve elektrik işleri"
+      },
+      "mersin_onkoloji_hastanesi": {
+        "title": "Mersin Üniversitesi Onkoloji Hastanesi",
+        "desc": "252 yatak – elektrik & mekanik taahhüt"
+      },
+      "side_antik_hamam": {
+        "title": "Antalya Side Antik Kent Hamam",
+        "desc": "Renovasyon projesi anahtar teslimi"
+      },
+      "antalya_jj": {
+        "title": "Antalya Jolly Joker (JJ Pub)",
+        "desc": "Elektrik taahhüt & pano işleri"
+      }
+    },
     "references": {
       "title": "Referanslarımız",
       "subtitle": "2006–2025 arası tamamlanan işlerimizden seçki."
@@ -237,7 +327,12 @@
   "projects_detail": {
     "breadcrumbs": { "projects": "Projeler" },
     "gallery_title": "Fotoğraf Galerisi",
-    "back": "Tüm projelere geri dön"
+    "back": "Tüm projelere geri dön",
+    "hero": {
+      "prev": "Önceki",
+      "next": "Sonraki",
+      "goto": "{index}. görsele git"
+    }
   },
 
   "contact": {
@@ -251,7 +346,14 @@
       "title": "İletişim Bilgileri",
       "address": "Konuksever Mah. Emrah Cad. No:68/A, Muratpaşa / Antalya"
     },
-    "social": { "title": "Sosyal Medya" },
+    "social": {
+      "title": "Sosyal Medya",
+      "links": {
+        "linkedin": "LinkedIn",
+        "instagram": "Instagram",
+        "facebook": "Facebook"
+      }
+    },
     "form": { "title": "Bizimle İletişime Geçin" }
   },
 

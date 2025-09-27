@@ -2,6 +2,7 @@
 "use client";
 import React from "react";
 import NextImage from "next/image";
+import { useTranslations } from "next-intl";
 
 type Dim = { w: number; h: number } | null;
 
@@ -19,6 +20,7 @@ export default function ProjectHero({
   maxHeight?: number;
   className?: string;
 }) {
+  const t = useTranslations("projects_detail.hero");
   const [i, setI] = React.useState(0);
   const count = images.length;
 
@@ -111,14 +113,14 @@ export default function ProjectHero({
           <>
             <button
               onClick={prev}
-              aria-label="Önceki"
+              aria-label={t("prev")}
               className="absolute left-3 top-1/2 -translate-y-1/2 z-10 w-11 h-11 rounded-full bg-white/80 hover:bg-white shadow border border-neutral-200 backdrop-blur flex items-center justify-center"
             >
               <svg viewBox="0 0 24 24" className="w-6 h-6"><path d="M15 6l-6 6 6 6" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </button>
             <button
               onClick={next}
-              aria-label="Sonraki"
+              aria-label={t("next")}
               className="absolute right-3 top-1/2 -translate-y-1/2 z-10 w-11 h-11 rounded-full bg-white/80 hover:bg-white shadow border border-neutral-200 backdrop-blur flex items-center justify-center"
             >
               <svg viewBox="0 0 24 24" className="w-6 h-6"><path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -133,7 +135,7 @@ export default function ProjectHero({
                 key={idx}
                 onClick={() => setI(idx)}
                 className={`h-1.5 w-4 rounded-full ${i === idx ? "bg-[var(--brand)]" : "bg-white/70"}`}
-                aria-label={`${idx + 1}. görsel`}
+                aria-label={t("goto", {index: idx + 1})}
               />
             ))}
           </div>

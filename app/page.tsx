@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { projectsWithPhotos } from "@/data/projects";
 
 const ASSET_BASE = "/assets";
@@ -10,6 +11,10 @@ const ASSET_BASE = "/assets";
 const featuredProjects = projectsWithPhotos.slice(0, 6);
 
 export default function Page() {
+  const t = useTranslations("home");
+  const baseFeatures = t.raw("features") as string[];
+  const marqueeItems = Array.from({ length: 4 }, () => baseFeatures).flat();
+  const projectMessages = t.raw("projects.items") as Record<string, { title: string; desc: string }>;
   return (
     <div className="min-h-screen bg-neutral-50 text-neutral-900">
       <style>{`:root{--brand:#D9251C;--brand-dark:#B01E16;--ink:#111111;--paper:#FAFAFA;--muted:#6B7280}`}</style>
@@ -129,14 +134,14 @@ export default function Page() {
       {/* oklar */}
       <button
         onClick={handlePrev}
-        aria-label="Önceki"
+        aria-label={t("hero.prev")}
         className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white/70 hover:bg-white shadow border border-neutral-200 backdrop-blur flex items-center justify-center"
       >
         <svg viewBox="0 0 24 24" className="w-5 h-5"><path d="M15 6l-6 6 6 6" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/></svg>
       </button>
       <button
         onClick={handleNext}
-        aria-label="Sonraki"
+        aria-label={t("hero.next")}
         className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white/70 hover:bg-white shadow border border-neutral-200 backdrop-blur flex items-center justify-center"
       >
         <svg viewBox="0 0 24 24" className="w-5 h-5"><path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -146,21 +151,23 @@ export default function Page() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 grid min-h-[85vh] content-center">
           <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight tracking-tight">
-              Güvenilir mühendislik, sürdürülebilir enerji, kalıcı değer.
+              {t("hero.title")}
             </h1>
           </motion.div>
           <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1, duration: 0.6 }}>
             <p className="mt-6 text-neutramt-6 text-neutral-700 font-semibold max-w-2xll-700 max-w-2xl">
-              Elektrikte 25+ yıllık deneyim, güçlü mühendislik ve anahtar teslim projeler.
+              {t("hero.subtitle")}
             </p>
           </motion.div>
           <div className="mt-8 flex flex-col sm:flex-row gap-3">
-            <a href="#teklif" className="px-5 py-3 rounded-xl bg-neutral-800 text-white hover:bg-[var(--brand)]">Hızlı Teklif Al</a>
+            <a href="#teklif" className="px-5 py-3 rounded-xl bg-neutral-800 text-white hover:bg-[var(--brand)]">
+              {t("cta.quote")}
+            </a>
             <Link
               href="/projeler"
               className="px-5 py-3 rounded-xl border border-neutral-300 hover:border-[var(--brand)] hover:text-[var(--brand)]"
             >
-              Projeler
+              {t("cta.projects")}
             </Link>
           </div>
 
@@ -168,41 +175,11 @@ export default function Page() {
           <style>{`@keyframes featureScroll {0%{transform:translateX(0)}100%{transform:translateX(-50%)}}`}</style>
           <div className="mt-10 overflow-hidden">
             <div className="flex gap-4 whitespace-nowrap animate-[featureScroll_30s_linear_infinite]">
-              {[
-                "25+ yıl deneyim",
-                "50+ büyük ölçekli proje",
-                "Ulusal & uluslararası referanslar",
-                "Zamanında teslim ve servis",
-                "GES ve elektrik taahhütte uzman ekip",
-                "Etkili ve uygun fiyat politikası",
-                "Yüksek kalite standartları",
-                "Kapsamlı çözüm ortaklığı",
-                "25+ yıl deneyim",
-                "50+ büyük ölçekli proje",
-                "Ulusal & uluslararası referanslar",
-                "Zamanında teslim ve servis",
-                "GES ve elektrik taahhütte uzman ekip",
-                "Etkili ve uygun fiyat politikası",
-                "Yüksek kalite standartları",
-                "Kapsamlı çözüm ortaklığı",
-                "25+ yıl deneyim",
-                "50+ büyük ölçekli proje",
-                "Ulusal & uluslararası referanslar",
-                "Zamanında teslim ve servis",
-                "GES ve elektrik taahhütte uzman ekip",
-                "Etkili ve uygun fiyat politikası",
-                "Yüksek kalite standartları",
-                "Kapsamlı çözüm ortaklığı",
-                "25+ yıl deneyim",
-                "50+ büyük ölçekli proje",
-                "Ulusal & uluslararası referanslar",
-                "Zamanında teslim ve servis",
-                "GES ve elektrik taahhütte uzman ekip",
-                "Etkili ve uygun fiyat politikası",
-                "Yüksek kalite standartları",
-                "Kapsamlı çözüm ortaklığı",
-              ].map((txt, idx) => (
-                <span key={idx} className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-300 bg-white/70 backdrop-blur text-sm text-neutral-800">
+              {marqueeItems.map((txt, idx) => (
+                <span
+                  key={`${txt}-${idx}`}
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-300 bg-white/70 backdrop-blur text-sm text-neutral-800"
+                >
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-7 h-7 text-[var(--brand)]" fill="none"><path d="M9 12.75 11.25 15 15 9.75" stroke="currentColor" strokeWidth="1.5" /></svg>
                   {txt}
                 </span>
@@ -218,24 +195,18 @@ export default function Page() {
       {/* About */}
       <section id="hakkimizda" className="pt-10 md:pt-14 pb-8 md:pb-10 bg-white">
         <div className="max-w-5xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-semibold">Hakkımızda</h2>
+          <h2 className="text-2xl md:text-3xl font-semibold">{t("about.title")}</h2>
           <p className="mt-4 whitespace-pre-line text-neutral-700 text-[15px] leading-7">
-AYK Proje Elektrik Ltd. Şti., elektrik mühendisliği alanında yenilikçi ve müşteri odaklı hizmetler sunan bir firmadır. Kuruluşumuzdan bu yana, modern teknolojileri ve deneyimli ekibimizin uzmanlığını bir araya getirerek müşterilerimize en uygun ve verimli çözümleri sunmayı hedefliyoruz.
-
-Hizmet yelpazemiz geniş olup, her ölçekteki projeye değer katmayı amaçlıyoruz. Elektrik altyapı tasarımı ve uygulamasından otomasyon sistemleri ve enerji verimliliği projelerine kadar birçok alanda faaliyet gösteriyoruz. Ayrıca (OG) Orta Gerilim ve (AG) Alçak Gerilim sistemlerinde dağıtım, kumanda, kompanzasyon panolarının tasarım ve üretimini gerçekleştiriyoruz.
-
-Sektörün önde gelen markalarıyla iş birliği yaparak, perakende ve toptan elektrik malzemesi satışında müşterilerimize kaliteli ürünler sunuyoruz. Teknolojiyi yakından takip ediyor ve müşteri memnuniyetini ön planda tutarak projelerimizi zamanında ve eksiksiz teslim etmeye özen gösteriyoruz.
-
-Deneyimli mühendislerimiz, teknisyenlerimiz ve teknik ekibimizle malzeme seçimi, projelendirme, saha keşfi ve montaj konularında ihtiyaç duyduğunuz tüm hizmetleri sağlıyoruz. Hizmet ağımızı sürekli genişleterek sektördeki konumumuzu güçlendirmeyi amaçlıyoruz.
+            {t("about.body")}
           </p>
           <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="rounded-2xl border border-neutral-200 p-6 bg-neutral-50">
-              <h3 className="font-medium text-lg">Vizyonumuz</h3>
-              <p className="mt-2 text-sm text-neutral-700">Vizyonumuz; sektörde inovasyon, kalite ve güvenilirlik ile anılan ulusal ve uluslararası projelerde tercih edilen lider firma olmaktır. Teknolojik gelişmeleri yakından takip ederek ve deneyimli ekibimizin uzmanlığını kullanarak müşteri memnuniyetini en üst düzeye çıkarmayı, sektöre yön veren sürdürülebilir çözümler sunmayı ve sektördeki standartları yükseltmeyi amaçlıyoruz.</p>
+              <h3 className="font-medium text-lg">{t("about.vision.title")}</h3>
+              <p className="mt-2 text-sm text-neutral-700">{t("about.vision.body")}</p>
             </div>
             <div className="rounded-2xl border border-neutral-200 p-6 bg-neutral-50">
-              <h3 className="font-medium text-lg">Misyonumuz</h3>
-              <p className="mt-2 text-sm text-neutral-700">AYK Proje Elektrik olarak misyonumuz, müşterilerimizin ihtiyaçlarını tam olarak karşılayan yenilikçi, verimli ve yüksek kaliteli mühendislik çözümleri sunmaktır. Modern teknolojileri ve deneyimli ekibimizin uzmanlığını birleştirerek, her ölçekteki projeye değer katmayı ve sektörün gelişimine katkıda bulunmayı amaçlıyoruz. Profesyonellik, güvenilirlik ve müşteri odaklı yaklaşımımızla hizmetlerimizi sunarken, projelerimizi zamanında ve eksiksiz teslim etmeye özen gösteriyor; en yüksek kalite standartlarını korumayı taahhüt ediyoruz.</p>
+              <h3 className="font-medium text-lg">{t("about.mission.title")}</h3>
+              <p className="mt-2 text-sm text-neutral-700">{t("about.mission.body")}</p>
             </div>
           </div>
         </div>
@@ -244,27 +215,32 @@ Deneyimli mühendislerimiz, teknisyenlerimiz ve teknik ekibimizle malzeme seçim
       {/* Projects */}
       <section id="projeler" className="pt-8 md:pt-10 pb-16 md:pb-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-semibold border-l-4 border-[var(--brand)] pl-3">Seçili Projeler</h2>
+          <h2 className="text-2xl md:text-3xl font-semibold border-l-4 border-[var(--brand)] pl-3">
+            {t("projects.title")}
+          </h2>
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-            {featuredProjects.map((p) => (
-              <Link
-                key={p.slug}
-                href={`/projeler/${p.slug}`}
-                className="group block rounded-2xl overflow-hidden border border-neutral-200 bg-neutral-50 hover:border-[var(--brand)] transition-colors"
-              >
-                <div className="aspect-[16/10] overflow-hidden">
-                  <img
-                    src={p.cover}
-                    alt={p.title}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-5">
-                  <h3 className="font-medium">{p.title}</h3>
-                  <p className="mt-1 text-sm text-neutral-600">{p.desc}</p>
-                </div>
-              </Link>
-            ))}
+            {featuredProjects.map((p) => {
+              const content = projectMessages[p.slug] ?? { title: p.slug, desc: "" };
+              return (
+                <Link
+                  key={p.slug}
+                  href={`/projeler/${p.slug}`}
+                  className="group block rounded-2xl overflow-hidden border border-neutral-200 bg-neutral-50 hover:border-[var(--brand)] transition-colors"
+                >
+                  <div className="aspect-[16/10] overflow-hidden">
+                    <img
+                      src={p.cover}
+                      alt={content.title}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="font-medium">{content.title}</h3>
+                    <p className="mt-1 text-sm text-neutral-600">{content.desc}</p>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -272,8 +248,8 @@ Deneyimli mühendislerimiz, teknisyenlerimiz ve teknik ekibimizle malzeme seçim
       {/* CTA */}
       <section id="teklif" className="py-16 md:py-24 bg-neutral-900 text-white">
         <div className="max-w-5xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-semibold">Projeniz için hızlı bir keşif ve fiyat teklifi alın</h2>
-          <p className="mt-2 text-neutral-300">Temel bilgileri bırakın; en kısa sürede dönüş yapalım.</p>
+          <h2 className="text-2xl md:text-3xl font-semibold">{t("quote.title")}</h2>
+          <p className="mt-2 text-neutral-300">{t("quote.subtitle")}</p>
           <QuoteForm />
         </div>
       </section>
@@ -284,6 +260,7 @@ Deneyimli mühendislerimiz, teknisyenlerimiz ve teknik ekibimizle malzeme seçim
 function QuoteForm() {
   const [submitting, setSubmitting] = React.useState(false);
   const [feedback, setFeedback] = React.useState<{ ok: boolean; message: string } | null>(null);
+  const t = useTranslations("home.quote");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -304,19 +281,36 @@ function QuoteForm() {
 
       if (!res.ok) {
         const j = await res.json().catch(() => ({}));
-        const message = typeof j?.error === "string" && j.error.trim().length > 0 ? j.error : "Bir hata oluştu.";
+        const message =
+          typeof j?.error === "string" && j.error.trim().length > 0
+            ? j.error
+            : t("alert_err");
         setFeedback({ ok: false, message });
         return;
       }
 
       form.reset();
-      setFeedback({ ok: true, message: "Talebiniz alındı. En kısa sürede dönüş yapacağız." });
+      setFeedback({ ok: true, message: t("alert_ok") });
     } catch (error) {
-      setFeedback({ ok: false, message: "Sunucuya bağlanırken bir sorun oluştu. Lütfen tekrar deneyiniz." });
+      setFeedback({ ok: false, message: t("network_error") });
     } finally {
       setSubmitting(false);
     }
   };
+
+  const renderLink = React.useCallback(
+    (chunks: React.ReactNode, attrs: Record<string, unknown>) => (
+      <a
+        href={(attrs?.href as string) ?? "/aydinlatma-metni"}
+        className={(attrs?.class as string) ?? "text-[var(--brand)] font-medium"}
+        target={attrs?.target as string | undefined}
+        rel={attrs?.rel as string | undefined}
+      >
+        {chunks}
+      </a>
+    ),
+    []
+  );
 
   return (
     <form onSubmit={handleSubmit} className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -331,10 +325,31 @@ function QuoteForm() {
           {feedback.message}
         </div>
       )}
-            <input name="name" required className="px-4 py-3 rounded-xl bg-white text-[var(--ink)] outline-none" placeholder="Ad Soyad *" />
-            <input name="contact" required className="px-4 py-3 rounded-xl bg-white text-[var(--ink)] outline-none" placeholder="E-posta / Telefon *" />
-            <input name="projectType" required className="md:col-span-2 px-4 py-3 rounded-xl bg-white text-[var(--ink)] outline-none" placeholder="Proje türü (Malzeme Alımı, Taahhüt, GES, Bakım...) *" />
-            <textarea name="message" required rows={4} className="md:col-span-2 px-4 py-3 rounded-xl bg-white text-[var(--ink)] outline-none" placeholder="Kısa açıklama *"></textarea>
+            <input
+              name="name"
+              required
+              className="px-4 py-3 rounded-xl bg-white text-[var(--ink)] outline-none"
+              placeholder={t("form.name")}
+            />
+            <input
+              name="contact"
+              required
+              className="px-4 py-3 rounded-xl bg-white text-[var(--ink)] outline-none"
+              placeholder={t("form.contact")}
+            />
+            <input
+              name="projectType"
+              required
+              className="md:col-span-2 px-4 py-3 rounded-xl bg-white text-[var(--ink)] outline-none"
+              placeholder={t("form.type")}
+            />
+            <textarea
+              name="message"
+              required
+              rows={4}
+              className="md:col-span-2 px-4 py-3 rounded-xl bg-white text-[var(--ink)] outline-none"
+              placeholder={t("form.message")}
+            ></textarea>
 
             {/* Honeypot (gizli) */}
             <input type="text" name="honey" className="hidden" tabIndex={-1} autoComplete="off" />
@@ -343,20 +358,21 @@ function QuoteForm() {
             <label className="md:col-span-2 flex items-start gap-2 text-sm text-neutral-200/90">
               <input type="checkbox" name="consentInfo" required className="w-4 h-4 accent-[var(--brand)]" />
               <span className="text-neutral-200">
-                <a href="/aydinlatma-metni" target="_blank" className="text-[var(--brand)] font-medium">Aydınlatma Metni</a>’ni okudum; başvurumun değerlendirilmesi amacıyla kişisel verilerimin işlenmesine <b>onay veriyorum</b>.
+                {t.rich("consent_apply_html", {
+                  a: renderLink,
+                  b: (chunks) => <b>{chunks}</b>,
+                })}
               </span>
             </label>
 
             <label className="md:col-span-2 flex items-start gap-2 text-sm text-neutral-200/90">
               <input type="checkbox" name="consentContact" required className="w-4 h-4 accent-[var(--brand)]" />
-              <span className="text-neutral-200">
-                Projem hakkında <b>tarafımla iletişime geçilmesine</b> onay veriyorum.
-              </span>
+              <span className="text-neutral-200">{t("consent_contact")}</span>
             </label>
 
             <label className="md:col-span-2 flex items-start gap-2 text-sm text-neutral-300">
               <input type="checkbox" name="consentMarketing" className="w-4 h-4 accent-[var(--brand)]" />
-              <span>Pazarlama/bilgilendirme amaçlı iletişim için <b>açık rıza</b> veriyorum. (İsteğe bağlı)</span>
+              <span>{t.rich("consent_marketing", { b: (chunks) => <b>{chunks}</b> })}</span>
             </label>
 
       <button
@@ -364,7 +380,7 @@ function QuoteForm() {
         type="submit"
         disabled={submitting}
       >
-        {submitting ? "Gönderiliyor..." : "Teklif Talep Et"}
+        {submitting ? t("submit_loading") : t("submit")}
       </button>
     </form>
   );

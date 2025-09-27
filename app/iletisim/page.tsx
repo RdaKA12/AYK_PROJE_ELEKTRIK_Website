@@ -1,30 +1,36 @@
+import type { Metadata } from "next";
 import Container from "@/components/Container";
 import ContactForm from "@/components/ContactForm";
 import { Mail, MapPin, Instagram, Linkedin, Facebook } from "lucide-react";
+import { getTranslations, getLocale } from "next-intl/server";
 
-export const metadata = {
-  title: "İletişim | AYK Proje Elektrik",
-  description: "AYK Proje Elektrik iletişim bilgileri, sosyal medya hesapları ve teklif formu.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale();
+  const t = await getTranslations({ locale, namespace: "contact" });
+  return {
+    title: t("meta.title"),
+    description: t("meta.description"),
+  };
+}
 
-export default function Page() {
+export default async function Page() {
+  const t = await getTranslations({ namespace: "contact" });
+  const socialLinks = t.raw("social.links") as Record<string, string>;
   return (
     <section className="py-10 md:py-14">
       <Container>
         {/* Başlık */}
         <h1 className="text-3xl md:text-4xl font-semibold border-l-4 border-[var(--brand)] pl-3">
-          İletişim
+          {t("title")}
         </h1>
-        <p className="mt-4 text-neutral-700 text-[15px] leading-7">
-          Bizimle iletişime geçmek için aşağıdaki bilgilerden faydalanabilir veya hızlıca formu doldurabilirsiniz.
-        </p>
+        <p className="mt-4 text-neutral-700 text-[15px] leading-7">{t("intro")}</p>
 
         {/* İçerik */}
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-10">
           {/* Sol taraf – bilgiler */}
           <div className="space-y-6">
             <div className="rounded-2xl border border-neutral-200 p-6 bg-neutral-50">
-              <h3 className="font-medium text-lg mb-3">İletişim Bilgileri</h3>
+              <h3 className="font-medium text-lg mb-3">{t("contact_info.title")}</h3>
               <ul className="space-y-3 text-sm text-neutral-700">
                 <li className="flex items-center gap-3">
                   <Mail className="w-5 h-5 text-[var(--brand)]" />
@@ -34,13 +40,13 @@ export default function Page() {
                 </li>
                 <li className="flex items-center gap-3">
                   <MapPin className="w-5 h-5 text-[var(--brand)]" />
-                  Konuksever Mah. Emrah Cad. No:68/A, Muratpaşa / Antalya
+                  {t("contact_info.address")}
                 </li>
               </ul>
             </div>
 
             <div className="rounded-2xl border border-neutral-200 p-6 bg-neutral-50">
-              <h3 className="font-medium text-lg mb-3">Sosyal Medya</h3>
+              <h3 className="font-medium text-lg mb-3">{t("social.title")}</h3>
               <ul className="space-y-3 text-sm text-neutral-700">
                 <li className="flex items-center gap-3">
                   <Linkedin className="w-5 h-5 text-[var(--brand)]" />
@@ -49,7 +55,7 @@ export default function Page() {
                     target="_blank"
                     className="hover:text-[var(--brand)]"
                   >
-                    LinkedIn
+                    {socialLinks.linkedin}
                   </a>
                 </li>
                 <li className="flex items-center gap-3">
@@ -59,7 +65,7 @@ export default function Page() {
                     target="_blank"
                     className="hover:text-[var(--brand)]"
                   >
-                    Instagram
+                    {socialLinks.instagram}
                   </a>
                 </li>
                 <li className="flex items-center gap-3">
@@ -69,7 +75,7 @@ export default function Page() {
                     target="_blank"
                     className="hover:text-[var(--brand)]"
                   >
-                    Facebook
+                    {socialLinks.facebook}
                   </a>
                 </li>
               </ul>
@@ -91,7 +97,7 @@ export default function Page() {
 
           {/* Sağ taraf – form */}
           <div>
-            <h3 className="font-medium text-lg mb-3">Bizimle İletişime Geçin</h3>
+            <h3 className="font-medium text-lg mb-3">{t("form.title")}</h3>
             <ContactForm />
           </div>
         </div>

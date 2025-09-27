@@ -1,4 +1,11 @@
 {
+  "layout": {
+    "meta": {
+      "title": "AYK Project Electric",
+      "template": "%s | AYK Project Electric",
+      "description": "25+ years of experience in electricity, solid engineering and turnkey projects."
+    }
+  },
   "header": {
     "brand": "AYK Project Electric",
     "nav": {
@@ -14,6 +21,17 @@
     },
     "menu": { "title": "Menu" },
     "aria": { "menu_open": "Open menu", "menu_close": "Close menu" }
+  },
+
+  "languageSwitcher": {
+    "label": "Language selection",
+    "languages": {
+      "tr": "Turkish",
+      "en": "English",
+      "de": "German",
+      "ru": "Russian",
+      "ar": "Arabic"
+    }
   },
 
   "footer": {
@@ -55,9 +73,10 @@
       "items": {
         "side_athena": { "title": "Antalya Side Athena Temple", "desc": "Electrical infrastructure and lighting applications in historical site" },
         "konyaalti_sahili": { "title": "Antalya Konyaaltı Coastline", "desc": "Coastal lighting and energy infrastructure" },
-        "hava_meydan": { "title": "Antalya Air Base Command", "desc": "Electrical contracting and modernization works in military facility" },
+        "antalya_hava_meydan": { "title": "Antalya Air Base Command", "desc": "Electrical contracting and modernization works in military facility" },
         "lider_tohum_ges": { "title": "Antalya Lider Tohum", "desc": "25kW rooftop greenhouse PV project" },
         "ela_excellence": { "title": "Ela Excellence Resort Hotel", "desc": "Electrical installations in hospitality facility" },
+        "hidirlik_kulesi": { "title": "Antalya Hıdırlık Tower", "desc": "Lighting and electrical renovation works" },
         "gaziantep_sabunhan": { "title": "Gaziantep Kayna Soap and Molasses Museum", "desc": "Lighting and electrical solutions in historical building" }
       }
     },
@@ -74,8 +93,33 @@
       "consent_contact": "I consent to being contacted about my project.",
       "consent_marketing": "I give <b>explicit consent</b> for marketing/information communication. (Optional)",
       "submit": "Request Quote",
+      "submit_loading": "Sending...",
       "alert_ok": "Your request has been received. We will get back to you as soon as possible.",
-      "alert_err": "An error occurred."
+      "alert_err": "An error occurred.",
+      "network_error": "There was a problem connecting to the server. Please try again."
+    }
+  },
+
+  "contactForm": {
+    "fields": {
+      "name": "Full Name *",
+      "contact": "E-mail / Phone *",
+      "topic": "Subject *",
+      "message": "Your message *"
+    },
+    "consents": {
+      "info_html": "I have read the <a href=\"/aydinlatma-metni\" class=\"text-[var(--brand)] font-medium\">Privacy Notice</a> and I <b>consent</b> to the processing of my personal data for the purpose of responding to my message.",
+      "contact": "I consent to <b>being contacted</b> regarding my request/message.",
+      "marketing": "I give <b>explicit consent</b> to receive marketing/information communications. (Optional)"
+    },
+    "submit": {
+      "default": "Send",
+      "loading": "Sending..."
+    },
+    "feedback": {
+      "success": "Your message has been received. We will get back to you as soon as possible.",
+      "error": "An error occurred.",
+      "network": "There was a problem connecting to the server. Please try again."
     }
   },
 
@@ -226,6 +270,52 @@
     },
     "title": "Projects",
     "intro": "Below you can find our highlighted projects with photos and our comprehensive reference list.",
+    "items": {
+      "side_athena": {
+        "title": "Antalya Side Athena Temple",
+        "desc": "Electrical infrastructure and lighting applications in historical site"
+      },
+      "konyaalti_sahili": {
+        "title": "Antalya Konyaaltı Coastline",
+        "desc": "Coastal lighting and energy infrastructure"
+      },
+      "antalya_hava_meydan": {
+        "title": "Antalya Air Base Command",
+        "desc": "Electrical contracting and modernization works in military facility"
+      },
+      "lider_tohum_ges": {
+        "title": "Antalya Lider Tohum",
+        "desc": "25kW rooftop greenhouse PV project"
+      },
+      "ela_excellence": {
+        "title": "Ela Excellence Resort Hotel",
+        "desc": "Electrical installations in hospitality facility"
+      },
+      "hidirlik_kulesi": {
+        "title": "Antalya Hıdırlık Tower",
+        "desc": "Lighting and electrical renovation works"
+      },
+      "gaziantep_sabunhan": {
+        "title": "Gaziantep Kayna Soap and Molasses Museum",
+        "desc": "Lighting and electrical solutions in historical building"
+      },
+      "bodrum_no81_otel": {
+        "title": "Bodrum No81 Hotel",
+        "desc": "Pool panels and electrical works across 98 rooms"
+      },
+      "mersin_onkoloji_hastanesi": {
+        "title": "Mersin University Oncology Hospital",
+        "desc": "252-bed electrical & mechanical contracting"
+      },
+      "side_antik_hamam": {
+        "title": "Antalya Side Ancient Bath",
+        "desc": "Turnkey renovation project"
+      },
+      "antalya_jj": {
+        "title": "Antalya Jolly Joker (JJ Pub)",
+        "desc": "Electrical contracting & panel works"
+      }
+    },
     "references": {
       "title": "Our References",
       "subtitle": "A selection from our completed works between 2006–2025."
@@ -237,7 +327,12 @@
   "projects_detail": {
     "breadcrumbs": { "projects": "Projects" },
     "gallery_title": "Photo Gallery",
-    "back": "Back to all projects"
+    "back": "Back to all projects",
+    "hero": {
+      "prev": "Previous image",
+      "next": "Next image",
+      "goto": "Go to image {index}"
+    }
   },
 
   "contact": {
@@ -251,7 +346,14 @@
       "title": "Contact Information",
       "address": "Konuksever Mah. Emrah Cad. No:68/A, Muratpaşa / Antalya"
     },
-    "social": { "title": "Social Media" },
+    "social": {
+      "title": "Social Media",
+      "links": {
+        "linkedin": "LinkedIn",
+        "instagram": "Instagram",
+        "facebook": "Facebook"
+      }
+    },
     "form": { "title": "Get in Touch With Us" }
   },
   "kvkk": {

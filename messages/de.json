@@ -1,4 +1,11 @@
 {
+  "layout": {
+    "meta": {
+      "title": "AYK Projekt Elektrik",
+      "template": "%s | AYK Projekt Elektrik",
+      "description": "Über 25 Jahre Erfahrung in der Elektrotechnik, starkes Engineering und schlüsselfertige Projekte."
+    }
+  },
   "header": {
     "brand": "AYK Projekt Elektrik",
     "nav": {
@@ -14,6 +21,17 @@
     },
     "menu": { "title": "Menü" },
     "aria": { "menu_open": "Menü öffnen", "menu_close": "Menü schließen" }
+  },
+
+  "languageSwitcher": {
+    "label": "Sprachauswahl",
+    "languages": {
+      "tr": "Türkisch",
+      "en": "Englisch",
+      "de": "Deutsch",
+      "ru": "Russisch",
+      "ar": "Arabisch"
+    }
   },
 
   "footer": {
@@ -55,9 +73,10 @@
       "items": {
         "side_athena": { "title": "Antalya Side Athena Tempel", "desc": "Elektrische Infrastruktur und Beleuchtungsanwendungen im historischen Bauwerk" },
         "konyaalti_sahili": { "title": "Antalya Konyaaltı Küstenstreifen", "desc": "Beleuchtung und Energieinfrastruktur entlang der Küste" },
-        "hava_meydan": { "title": "Antalya Luftwaffenstützpunkt", "desc": "Elektroarbeiten und Modernisierung in militärischer Anlage" },
+        "antalya_hava_meydan": { "title": "Antalya Luftwaffenstützpunkt", "desc": "Elektroarbeiten und Modernisierung in militärischer Anlage" },
         "lider_tohum_ges": { "title": "Antalya Lider Tohum", "desc": "25kW PV-Dachprojekt für Gewächshaus" },
         "ela_excellence": { "title": "Ela Excellence Resort Hotel", "desc": "Elektroinstallationen in Hotelanlagen" },
+        "hidirlik_kulesi": { "title": "Antalya Hıdırlık Turm", "desc": "Beleuchtungs- und Elektro-Renovierung" },
         "gaziantep_sabunhan": { "title": "Gaziantep Kayna Seifen- und Melassemuseum", "desc": "Beleuchtungs- und Elektroinstallationen in historischem Gebäude" }
       }
     },
@@ -74,8 +93,33 @@
       "consent_contact": "Ich stimme zu, dass ich bezüglich meines Projekts kontaktiert werde.",
       "consent_marketing": "Ich gebe <b>ausdrückliche Zustimmung</b> für Marketing-/Informationszwecke. (Optional)",
       "submit": "Angebot anfordern",
+      "submit_loading": "Wird gesendet...",
       "alert_ok": "Ihre Anfrage wurde erhalten. Wir werden uns so schnell wie möglich bei Ihnen melden.",
-      "alert_err": "Ein Fehler ist aufgetreten."
+      "alert_err": "Ein Fehler ist aufgetreten.",
+      "network_error": "Beim Verbinden mit dem Server ist ein Problem aufgetreten. Bitte versuchen Sie es erneut."
+    }
+  },
+
+  "contactForm": {
+    "fields": {
+      "name": "Vollständiger Name *",
+      "contact": "E-Mail / Telefon *",
+      "topic": "Betreff *",
+      "message": "Ihre Nachricht *"
+    },
+    "consents": {
+      "info_html": "Ich habe den <a href=\"/aydinlatma-metni\" class=\"text-[var(--brand)] font-medium\">Datenschutzhinweis</a> gelesen und <b>stimme zu</b>, dass meine personenbezogenen Daten zur Beantwortung meiner Nachricht verarbeitet werden.",
+      "contact": "Ich stimme zu, dass <b>mit mir Kontakt aufgenommen wird</b> in Bezug auf meine Anfrage/Nachricht.",
+      "marketing": "Ich gebe <b>ausdrückliche Zustimmung</b>, Marketing-/Informationsmitteilungen zu erhalten. (Optional)"
+    },
+    "submit": {
+      "default": "Senden",
+      "loading": "Wird gesendet..."
+    },
+    "feedback": {
+      "success": "Ihre Nachricht ist eingegangen. Wir melden uns schnellstmöglich bei Ihnen.",
+      "error": "Es ist ein Fehler aufgetreten.",
+      "network": "Beim Verbinden mit dem Server ist ein Problem aufgetreten. Bitte versuchen Sie es erneut."
     }
   },
 
@@ -225,6 +269,52 @@
     },
     "title": "Projekte",
     "intro": "Unten finden Sie unsere hervorgehobenen Projekte mit Fotos sowie unsere umfassende Referenzliste.",
+    "items": {
+      "side_athena": {
+        "title": "Antalya Side Athena Tempel",
+        "desc": "Elektrische Infrastruktur und Beleuchtung in historischem Bauwerk"
+      },
+      "konyaalti_sahili": {
+        "title": "Antalya Konyaaltı Küstenstreifen",
+        "desc": "Beleuchtungs- und Energieinfrastruktur entlang der Küste"
+      },
+      "antalya_hava_meydan": {
+        "title": "Antalya Luftwaffenstützpunkt",
+        "desc": "Elektro- und Modernisierungsarbeiten in militärischer Anlage"
+      },
+      "lider_tohum_ges": {
+        "title": "Antalya Lider Tohum",
+        "desc": "25-kW PV-Dachprojekt für Gewächshaus"
+      },
+      "ela_excellence": {
+        "title": "Ela Excellence Resort Hotel",
+        "desc": "Elektroinstallationen in Hotelanlage"
+      },
+      "hidirlik_kulesi": {
+        "title": "Antalya Hıdırlık Turm",
+        "desc": "Beleuchtungs- und Elektro-Renovierung"
+      },
+      "gaziantep_sabunhan": {
+        "title": "Gaziantep Kayna Seifen- und Melassemuseum",
+        "desc": "Beleuchtungs- und Elektro-Lösungen im historischen Gebäude"
+      },
+      "bodrum_no81_otel": {
+        "title": "Bodrum No81 Hotel",
+        "desc": "Pool-Schaltschränke und Elektroarbeiten in 98 Zimmern"
+      },
+      "mersin_onkoloji_hastanesi": {
+        "title": "Mersin Universität Onkologie-Krankenhaus",
+        "desc": "252-Betten Elektro- und Mechanik-Generalunternehmerleistung"
+      },
+      "side_antik_hamam": {
+        "title": "Antalya Side Antikes Hamam",
+        "desc": "Schlüsselfertige Renovierung"
+      },
+      "antalya_jj": {
+        "title": "Antalya Jolly Joker (JJ Pub)",
+        "desc": "Elektro- und Schaltschrankarbeiten"
+      }
+    },
     "references": {
       "title": "Unsere Referenzen",
       "subtitle": "Eine Auswahl unserer abgeschlossenen Arbeiten zwischen 2006–2025."
@@ -236,7 +326,12 @@
   "projects_detail": {
     "breadcrumbs": { "projects": "Projekte" },
     "gallery_title": "Fotogalerie",
-    "back": "Zurück zu allen Projekten"
+    "back": "Zurück zu allen Projekten",
+    "hero": {
+      "prev": "Vorheriges Bild",
+      "next": "Nächstes Bild",
+      "goto": "Zu Bild {index} wechseln"
+    }
   },
 
   "contact": {
@@ -250,7 +345,14 @@
       "title": "Kontaktinformationen",
       "address": "Konuksever Mah. Emrah Cad. Nr.68/A, Muratpaşa / Antalya"
     },
-    "social": { "title": "Soziale Medien" },
+    "social": {
+      "title": "Soziale Medien",
+      "links": {
+        "linkedin": "LinkedIn",
+        "instagram": "Instagram",
+        "facebook": "Facebook"
+      }
+    },
     "form": { "title": "Kontaktieren Sie uns" }
   },
   "kvkk": {
