@@ -4,8 +4,8 @@ import type {ReactNode} from "react";
 import {NextIntlClientProvider} from "next-intl";
 import {
   getMessages,
-  getTranslator,
-  unstable_setRequestLocale,
+  getTranslations,
+  setRequestLocale,
 } from "next-intl/server";
 import {notFound} from "next/navigation";
 
@@ -38,7 +38,7 @@ export async function generateMetadata({
     notFound();
   }
 
-  const t = await getTranslator({locale, namespace: "layout"});
+  const t = await getTranslations({locale, namespace: "layout"});
   const title = t("meta.title");
   const description = t("meta.description");
   const template = t("meta.template");
@@ -83,7 +83,7 @@ export default async function LocaleLayout({
 
   const normalizedLocale = locale as Locale;
 
-  unstable_setRequestLocale(normalizedLocale);
+  setRequestLocale(normalizedLocale);
 
   const messages = await getMessages({locale: normalizedLocale});
 
