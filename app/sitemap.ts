@@ -1,5 +1,4 @@
 import { MetadataRoute } from "next";
-import { services } from "@/data/services";                // senin Services dosyan
 import { projectsWithPhotos } from "@/data/projects";      // senin Projects dosyan
 
 // İstersen domaini .env ile yönetecek şekilde yaz:
@@ -25,13 +24,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  // Hizmet sayfaları (services)
-  const servicePages: MetadataRoute.Sitemap = (services ?? []).map(s => ({
-    url: `${BASE_URL}/hizmetler/${s.slug}`,
-    lastModified: now,
-    changeFrequency: "monthly",
-    priority: 0.7,
-  }));
-
-  return [...staticPages, ...projectPages, ...servicePages];
+  return [...staticPages, ...projectPages];
 }
