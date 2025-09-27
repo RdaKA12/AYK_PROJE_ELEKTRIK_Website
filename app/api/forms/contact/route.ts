@@ -20,7 +20,7 @@ export async function POST(req: Request) {
     }
 
     const body = await req.json().catch(() => ({}));
-    const { name, contact, message, honey, consentInfo, consentContact, consentMarketing } = body ?? {};
+    const { name, contact, topic, message, honey, consentInfo, consentContact, consentMarketing } = body ?? {};
 
     // Bot filtresi (honeypot doluysa sessiz geç)
     if (typeof honey === "string" && honey.trim() !== "") {
@@ -30,8 +30,9 @@ export async function POST(req: Request) {
     // Temel alanlar
     const _name = sanitize(name, 200);
     const _contact = sanitize(contact, 200);
+    const _topic = sanitize(topic, 200);
     const _message = sanitize(message, 4000);
-    if (!required(_name) || !required(_contact) || !required(_message)) {
+    if (!required(_name) || !required(_contact) || !required(_topic) || !required(_message)) {
       return NextResponse.json({ error: "Lütfen gerekli alanları doldurun." }, { status: 400, headers: { "Cache-Control": "no-store" } });
     }
 
@@ -47,7 +48,7 @@ export async function POST(req: Request) {
     const whenTR = new Date().toLocaleString("tr-TR");
 
     const subjectPrefix = process.env.MAIL_SUBJECT_PREFIX ?? "";
-    const subject = `${subjectPrefix} [İLETİŞİM] ${_name}`;
+    const subject = `${subjectPrefix} [İLETİŞİM] ${_name} – ${_topic}`;
 
     // Standart format: tablo + onaylar + iz bilgisi
     const html = `
@@ -55,6 +56,7 @@ export async function POST(req: Request) {
       <table style="border-collapse:collapse" cellpadding="6" border="1">
         <tr><td><b>Ad Soyad</b></td><td>${_name}</td></tr>
         <tr><td><b>İletişim</b></td><td>${_contact}</td></tr>
+        <tr><td><b>Konu</b></td><td>${_topic}</td></tr>
         <tr><td><b>Mesaj</b></td><td>${_message.replace(/\n/g, "<br/>")}</td></tr>
       </table>
       <h3>Onaylar</h3>
@@ -80,6 +82,7 @@ export async function POST(req: Request) {
 
 Ad Soyad : ${_name}
 İletişim : ${_contact}
+Konu      : ${_topic}
 Mesaj    :
 ${_message}
 
