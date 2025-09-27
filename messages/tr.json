@@ -23,6 +23,17 @@
     "aria": { "menu_open": "Menüyü aç", "menu_close": "Menüyü kapat" }
   },
 
+  "languageSwitcher": {
+    "label": "Dil seçenekleri",
+    "languages": {
+      "tr": "Türkçe",
+      "en": "English",
+      "de": "Deutsch",
+      "ru": "Русский",
+      "ar": "العربية"
+    }
+  },
+
   "footer": {
     "company_full": "AYK Proje Mühendislik Elektrik San. ve Tic. Ltd. Şti.",
     "rights": "Tüm hakları saklıdır.",

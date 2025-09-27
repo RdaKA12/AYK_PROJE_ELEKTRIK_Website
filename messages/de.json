@@ -23,6 +23,17 @@
     "aria": { "menu_open": "Menü öffnen", "menu_close": "Menü schließen" }
   },
 
+  "languageSwitcher": {
+    "label": "Sprachauswahl",
+    "languages": {
+      "tr": "Türkisch",
+      "en": "Englisch",
+      "de": "Deutsch",
+      "ru": "Russisch",
+      "ar": "Arabisch"
+    }
+  },
+
   "footer": {
     "company_full": "AYK Projekt Ingenieurwesen Elektrik Industrie und Handel GmbH",
     "rights": "Alle Rechte vorbehalten.",
