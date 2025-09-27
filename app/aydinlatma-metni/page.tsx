@@ -12,7 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function Page() {
-  const t = await getTranslations({ namespace: "privacy" });
+  const t = await getTranslations("privacy");
   const purposes = t.raw("sections.purposes.items") as string[];
   const footerText = `${t("footer.text")} `;
   const footerLink = t("footer.link");

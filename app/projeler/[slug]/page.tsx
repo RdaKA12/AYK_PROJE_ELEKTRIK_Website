@@ -13,8 +13,8 @@ export const dynamicParams = false;
 
 export default async function Page({ params }: { params: { slug: string } }) {
   const [tDetail, tProjects] = await Promise.all([
-    getTranslations({ namespace: "projects_detail" }),
-    getTranslations({ namespace: "projects" }),
+    getTranslations("projects_detail"),
+    getTranslations("projects"),
   ]);
   const p = projectsWithPhotos.find((x) => x.slug === params.slug);
   if (!p) return notFound();
