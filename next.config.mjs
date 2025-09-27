@@ -1,6 +1,6 @@
 import createNextIntlPlugin from 'next-intl/plugin';
 
-const locales = ['tr', 'en', 'de', 'ru', 'ar'];
+const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 
 const withNextIntl = createNextIntlPlugin({
   locales,
