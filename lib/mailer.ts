@@ -31,11 +31,19 @@ const sanitizeConnectionUrl = (connectionUrl: string) => {
 
   // Normalize credentials (especially passwords) that may contain reserved characters
   // such as # or &. These characters break the URL parser unless they are encoded.
-  const match = trimmed.match(/^([^:]+):\/\/([^@]+)@(.*)$/);
-  if (!match) return trimmed;
+  const protocolSeparatorIndex = trimmed.indexOf("://");
+  if (protocolSeparatorIndex === -1) return trimmed;
 
-  const [, protocol, authPart, hostPart] = match;
-  const colonIndex = authPart.indexOf(":");
+  const protocol = trimmed.slice(0, protocolSeparatorIndex);
+  const remainder = trimmed.slice(protocolSeparatorIndex + 3);
+  const atIndex = remainder.lastIndexOf("@");
+  if (atIndex === -1) return trimmed;
+
+  const authPart = remainder.slice(0, atIndex);
+  const hostPart = remainder.slice(atIndex + 1);
+  if (!authPart || !hostPart) return trimmed;
+
+  const colonIndex = authPart.lastIndexOf(":");
   if (colonIndex === -1) return trimmed;
 
   const rawUser = authPart.slice(0, colonIndex);
