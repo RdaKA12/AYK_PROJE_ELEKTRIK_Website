@@ -1,10 +1,11 @@
 "use client";
 
 import {useTransition} from "react";
-import {useLocale, usePathname, useRouter} from "next-intl/navigation";
 import {useTranslations} from "next-intl";
+import {usePathname, useRouter} from "@/lib/i18n/routing";
+import {useSearchParams} from "next/navigation";
 
-import {locales, type Locale} from "@/lib/i18n/config";
+import {defaultLocale, locales, type Locale} from "@/lib/i18n/config";
 
 type LanguageSwitcherProps = {
   className?: string;
@@ -12,9 +13,12 @@ type LanguageSwitcherProps = {
 
 export default function LanguageSwitcher({className}: LanguageSwitcherProps) {
   const t = useTranslations("languageSwitcher");
-  const locale = useLocale() as Locale;
   const pathname = usePathname();
   const router = useRouter();
+  const locale = (locales.find((code) =>
+    pathname === `/${code}` || pathname.startsWith(`/${code}/`)
+  ) ?? defaultLocale) as Locale;
+  const searchParams = useSearchParams();
   const [isPending, startTransition] = useTransition();
 
   const handleChange = (targetLocale: Locale) => {
@@ -23,7 +27,9 @@ export default function LanguageSwitcher({className}: LanguageSwitcherProps) {
     }
 
     startTransition(() => {
-      router.replace({pathname, locale: targetLocale});
+      const params = searchParams.toString();
+      const href = params.length > 0 ? `${pathname}?${params}` : pathname;
+      router.replace(href, {locale: targetLocale});
     });
   };
 
