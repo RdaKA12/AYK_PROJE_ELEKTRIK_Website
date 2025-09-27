@@ -81,8 +81,33 @@
       "consent_contact": "I consent to being contacted about my project.",
       "consent_marketing": "I give <b>explicit consent</b> for marketing/information communication. (Optional)",
       "submit": "Request Quote",
+      "submit_loading": "Sending...",
       "alert_ok": "Your request has been received. We will get back to you as soon as possible.",
-      "alert_err": "An error occurred."
+      "alert_err": "An error occurred.",
+      "network_error": "There was a problem connecting to the server. Please try again."
+    }
+  },
+
+  "contactForm": {
+    "fields": {
+      "name": "Full Name *",
+      "contact": "E-mail / Phone *",
+      "topic": "Subject *",
+      "message": "Your message *"
+    },
+    "consents": {
+      "info_html": "I have read the <a href=\"/aydinlatma-metni\" class=\"text-[var(--brand)] font-medium\">Privacy Notice</a> and I <b>consent</b> to the processing of my personal data for the purpose of responding to my message.",
+      "contact": "I consent to <b>being contacted</b> regarding my request/message.",
+      "marketing": "I give <b>explicit consent</b> to receive marketing/information communications. (Optional)"
+    },
+    "submit": {
+      "default": "Send",
+      "loading": "Sending..."
+    },
+    "feedback": {
+      "success": "Your message has been received. We will get back to you as soon as possible.",
+      "error": "An error occurred.",
+      "network": "There was a problem connecting to the server. Please try again."
     }
   },
 
@@ -258,7 +283,14 @@
       "title": "Contact Information",
       "address": "Konuksever Mah. Emrah Cad. No:68/A, Muratpaşa / Antalya"
     },
-    "social": { "title": "Social Media" },
+    "social": {
+      "title": "Social Media",
+      "links": {
+        "linkedin": "LinkedIn",
+        "instagram": "Instagram",
+        "facebook": "Facebook"
+      }
+    },
     "form": { "title": "Get in Touch With Us" }
   },
   "kvkk": {

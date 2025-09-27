@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, Mail, MapPin } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 function NavLink({
   href,
@@ -33,17 +34,18 @@ function NavLink({
 }
 
 const LINKS = [
-  { href: "/", label: "Ana Sayfa" },
-  { href: "/hakkimizda", label: "Hakkımızda" },
-  { href: "/hizmetler", label: "Hizmetler" },
-  { href: "/projeler", label: "Projeler" },
-  { href: "/iletisim", label: "İletişim" },
-];
+  { href: "/", labelKey: "nav.home" },
+  { href: "/hakkimizda", labelKey: "nav.about" },
+  { href: "/hizmetler", labelKey: "nav.services" },
+  { href: "/projeler", labelKey: "nav.projects" },
+  { href: "/iletisim", labelKey: "nav.contact" },
+] as const;
 
 export default function Header() {
   const [open, setOpen] = React.useState(false);
   const pathname = usePathname();
   const isHome = pathname === "/";
+  const t = useTranslations("header");
 
   React.useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -57,11 +59,10 @@ export default function Header() {
       <div className="bg-neutral-900 text-neutral-100 text-xs sm:text-sm">
         <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
           <span className="hidden sm:flex items-center gap-1.5">
-            <Mail className="w-4 h-4" /> info@aykproje.com.tr
+            <Mail className="w-4 h-4" /> {t("topbar.email")}
           </span>
           <span className="hidden md:flex items-center gap-1.5">
-            <MapPin className="w-4 h-4" /> Konuksever Mah. Emrah Cad. No:68/A,
-            Muratpaşa / Antalya
+            <MapPin className="w-4 h-4" /> {t("topbar.address")}
           </span>
         </div>
       </div>
@@ -71,25 +72,25 @@ export default function Header() {
           <Link href="/" className="flex items-center gap-3">
             <img
               src="/assets/AYKlogo.webp"
-              alt="AYK Logo"
+              alt={t("brand")}
               className="h-12 w-auto"
             />
             <span className="font-semibold text-neutral-800">
-              AYK Proje Elektrik
+              {t("brand")}
             </span>
           </Link>
 
           <nav className="hidden md:flex items-center gap-6 text-sm ml-auto">
             {LINKS.map((l) => (
               <NavLink key={l.href} href={l.href}>
-                {l.label}
+                {t(l.labelKey)}
               </NavLink>
             ))}
           </nav>
 
           <button
             className="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl border border-neutral-300 bg-white"
-            aria-label="Menüyü aç"
+            aria-label={t("aria.menu_open")}
             onClick={() => setOpen(true)}
           >
             <Menu className="w-5 h-5" />
@@ -113,7 +114,7 @@ export default function Header() {
                 <Link href="/" className="flex items-center">
                   <img
                     src="/assets/AYKlogo.webp"
-                    alt="AYK Logo"
+                    alt={t("brand")}
                     className="h-12 w-auto md:h-20"
                   />
                 </Link>
@@ -122,7 +123,7 @@ export default function Header() {
                 <nav className="hidden md:flex items-center gap-6 text-sm ml-auto">
                   {LINKS.map((l) => (
                     <NavLink key={l.href} href={l.href}>
-                      {l.label}
+                      {t(l.labelKey)}
                     </NavLink>
                   ))}
                 </nav>
@@ -130,7 +131,7 @@ export default function Header() {
                 {/* Hamburger */}
                 <button
                   className="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl border border-neutral-300 bg-white"
-                  aria-label="Menüyü aç"
+                  aria-label={t("aria.menu_open")}
                   onClick={() => setOpen(true)}
                 >
                   <Menu className="w-5 h-5" />
@@ -157,11 +158,13 @@ export default function Header() {
           <div className="absolute right-0 top-0 h-full w-[80%] max-w-[360px] bg-white shadow-2xl flex flex-col">
             <div className="flex items-center justify-between border-b border-neutral-200 px-4 py-3">
               <h2 className="text-lg font-semibold flex items-center gap-2">
-                <span className="border-l-4 border-[var(--brand)] pl-2">Menü</span>
+                <span className="border-l-4 border-[var(--brand)] pl-2">
+                  {t("menu.title")}
+                </span>
               </h2>
               <button
                 className="inline-flex items-center justify-center w-9 h-9 rounded-lg border border-neutral-300 bg-white"
-                aria-label="Menüyü kapat"
+                aria-label={t("aria.menu_close")}
                 onClick={() => setOpen(false)}
               >
                 <X className="w-5 h-5" />
@@ -175,7 +178,7 @@ export default function Header() {
                   href={l.href}
                   onClick={() => setOpen(false)}
                 >
-                  {l.label}
+                  {t(l.labelKey)}
                 </NavLink>
               ))}
             </nav>

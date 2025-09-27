@@ -81,8 +81,33 @@
       "consent_contact": "Projem hakkında tarafımla iletişime geçilmesine onay veriyorum.",
       "consent_marketing": "Pazarlama/bilgilendirme amaçlı iletişim için <b>açık rıza</b> veriyorum. (İsteğe bağlı)",
       "submit": "Teklif Talep Et",
+      "submit_loading": "Gönderiliyor...",
       "alert_ok": "Talebiniz alındı. En kısa sürede dönüş yapacağız.",
-      "alert_err": "Bir hata oluştu."
+      "alert_err": "Bir hata oluştu.",
+      "network_error": "Sunucuya bağlanırken bir sorun oluştu. Lütfen tekrar deneyiniz."
+    }
+  },
+
+  "contactForm": {
+    "fields": {
+      "name": "Ad Soyad *",
+      "contact": "E-posta / Telefon *",
+      "topic": "Konu *",
+      "message": "Mesajınız *"
+    },
+    "consents": {
+      "info_html": "<a href=\"/aydinlatma-metni\" class=\"text-[var(--brand)] font-medium\">Aydınlatma Metni</a>’ni okudum; mesajımın yanıtlanması amacıyla kişisel verilerimin işlenmesine <b>onay veriyorum</b>.",
+      "contact": "Talebim/mesajım hakkında <b>tarafımla iletişime geçilmesine</b> onay veriyorum.",
+      "marketing": "Pazarlama/bilgilendirme amaçlı iletişim için <b>açık rıza</b> veriyorum. (İsteğe bağlı)"
+    },
+    "submit": {
+      "default": "Gönder",
+      "loading": "Gönderiliyor..."
+    },
+    "feedback": {
+      "success": "Mesajınız alındı. En kısa sürede dönüş yapacağız.",
+      "error": "Bir hata oluştu.",
+      "network": "Sunucuya bağlanırken bir sorun oluştu. Lütfen tekrar deneyiniz."
     }
   },
 
@@ -258,7 +283,14 @@
       "title": "İletişim Bilgileri",
       "address": "Konuksever Mah. Emrah Cad. No:68/A, Muratpaşa / Antalya"
     },
-    "social": { "title": "Sosyal Medya" },
+    "social": {
+      "title": "Sosyal Medya",
+      "links": {
+        "linkedin": "LinkedIn",
+        "instagram": "Instagram",
+        "facebook": "Facebook"
+      }
+    },
     "form": { "title": "Bizimle İletişime Geçin" }
   },
 
