@@ -1,9 +1,11 @@
 "use client";
 import React from "react";
+import { useTranslations } from "next-intl";
 
 export default function ContactForm() {
   const [submitting, setSubmitting] = React.useState(false);
   const [feedback, setFeedback] = React.useState<{ ok: boolean; message: string } | null>(null);
+  const t = useTranslations("contactForm");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -24,19 +26,36 @@ export default function ContactForm() {
 
       if (!res.ok) {
         const j = await res.json().catch(() => ({}));
-        const message = typeof j?.error === "string" && j.error.trim().length > 0 ? j.error : "Bir hata oluştu.";
+        const message =
+          typeof j?.error === "string" && j.error.trim().length > 0
+            ? j.error
+            : t("feedback.error");
         setFeedback({ ok: false, message });
         return;
       }
 
       form.reset();
-      setFeedback({ ok: true, message: "Mesajınız alındı. En kısa sürede dönüş yapacağız." });
+      setFeedback({ ok: true, message: t("feedback.success") });
     } catch (error) {
-      setFeedback({ ok: false, message: "Sunucuya bağlanırken bir sorun oluştu. Lütfen tekrar deneyiniz." });
+      setFeedback({ ok: false, message: t("feedback.network") });
     } finally {
       setSubmitting(false);
     }
   };
+
+  const renderLink = React.useCallback(
+    (chunks: React.ReactNode, attrs: Record<string, unknown>) => (
+      <a
+        href={(attrs?.href as string) ?? "/aydinlatma-metni"}
+        className={(attrs?.class as string) ?? "text-[var(--brand)] font-medium"}
+        target={attrs?.target as string | undefined}
+        rel={attrs?.rel as string | undefined}
+      >
+        {chunks}
+      </a>
+    ),
+    []
+  );
 
   return (
     <form
@@ -54,10 +73,31 @@ export default function ContactForm() {
           {feedback.message}
         </div>
       )}
-      <input name="name" required className="px-4 py-3 rounded-xl bg-white text-[var(--ink)] outline-none" placeholder="Ad Soyad *" />
-      <input name="contact" required className="px-4 py-3 rounded-xl bg-white text-[var(--ink)] outline-none" placeholder="E-posta / Telefon *" />
-      <input name="topic" required className="md:col-span-2 px-4 py-3 rounded-xl bg-white text-[var(--ink)] outline-none" placeholder="Konu *" />
-      <textarea name="message" required rows={5} className="md:col-span-2 px-4 py-3 rounded-xl bg-white text-[var(--ink)] outline-none" placeholder="Mesajınız *"></textarea>
+      <input
+        name="name"
+        required
+        className="px-4 py-3 rounded-xl bg-white text-[var(--ink)] outline-none"
+        placeholder={t("fields.name")}
+      />
+      <input
+        name="contact"
+        required
+        className="px-4 py-3 rounded-xl bg-white text-[var(--ink)] outline-none"
+        placeholder={t("fields.contact")}
+      />
+      <input
+        name="topic"
+        required
+        className="md:col-span-2 px-4 py-3 rounded-xl bg-white text-[var(--ink)] outline-none"
+        placeholder={t("fields.topic")}
+      />
+      <textarea
+        name="message"
+        required
+        rows={5}
+        className="md:col-span-2 px-4 py-3 rounded-xl bg-white text-[var(--ink)] outline-none"
+        placeholder={t("fields.message")}
+      ></textarea>
 
       {/* Honeypot */}
       <input type="text" name="honey" className="hidden" tabIndex={-1} autoComplete="off" />
@@ -66,16 +106,19 @@ export default function ContactForm() {
       <label className="md:col-span-2 flex items-start gap-2 text-sm text-neutral-700">
         <input type="checkbox" name="consentInfo" required className="w-5 h-5 accent-[var(--brand)]" />
         <span>
-          <a href="/aydinlatma-metni" target="_blank" className="text-[var(--brand)] font-medium"> Aydınlatma Metni</a>’ni okudum; mesajımın yanıtlanması amacıyla kişisel verilerimin işlenmesine <b>onay veriyorum</b>.
+          {t.rich("consents.info_html", {
+            a: renderLink,
+            b: (chunks) => <b>{chunks}</b>,
+          })}
         </span>
       </label>
       <label className="md:col-span-2 flex items-start gap-2 text-sm text-neutral-700">
         <input type="checkbox" name="consentContact" required className="w-4 h-4 accent-[var(--brand)]" />
-        <span>Talebim/mesajım hakkında <b>tarafımla iletişime geçilmesine</b> onay veriyorum.</span>
+        <span>{t.rich("consents.contact", { b: (chunks) => <b>{chunks}</b> })}</span>
       </label>
       <label className="md:col-span-2 flex items-start gap-2 text-sm text-neutral-600">
         <input type="checkbox" name="consentMarketing" className="w-4 h-4 accent-[var(--brand)]" />
-        <span>Pazarlama/bilgilendirme amaçlı iletişim için <b>açık rıza</b> veriyorum. (İsteğe bağlı)</span>
+        <span>{t.rich("consents.marketing", { b: (chunks) => <b>{chunks}</b> })}</span>
       </label>
 
       <button
@@ -83,7 +126,7 @@ export default function ContactForm() {
         disabled={submitting}
         className="md:col-span-2 px-5 py-3 rounded-xl bg-neutral-800 text-white font-medium hover:bg-[var(--brand)] disabled:cursor-not-allowed disabled:bg-neutral-500"
       >
-        {submitting ? "Gönderiliyor..." : "Gönder"}
+        {submitting ? t("submit.loading") : t("submit.default")}
       </button>
     </form>
   );

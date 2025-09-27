@@ -4,13 +4,15 @@ import { projectsWithPhotos } from "@/data/projects";
 import Link from "next/link";
 import ProjectHero from "@/components/ProjectHero";
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 
 export async function generateStaticParams() {
   return projectsWithPhotos.map((p) => ({ slug: p.slug }));
 }
 export const dynamicParams = false;
 
-export default function Page({ params }: { params: { slug: string } }) {
+export default async function Page({ params }: { params: { slug: string } }) {
+  const t = await getTranslations({ namespace: "projects_detail" });
   const p = projectsWithPhotos.find((x) => x.slug === params.slug);
   if (!p) return notFound();
 
@@ -26,7 +28,9 @@ export default function Page({ params }: { params: { slug: string } }) {
       <Container>
         {/* Breadcrumbs */}
         <div className="text-xs text-neutral-600">
-          <Link href="/projeler" className="hover:text-[var(--brand)]">Projeler</Link>
+          <Link href="/projeler" className="hover:text-[var(--brand)]">
+            {t("breadcrumbs.projects")}
+          </Link>
           <span className="mx-2">/</span>
           <span className="text-neutral-800">{p.title}</span>
         </div>
@@ -45,7 +49,7 @@ export default function Page({ params }: { params: { slug: string } }) {
         {/* Kare galeri */}
         {allGallery.length > 0 && (
           <>
-            <h2 className="mt-8 font-medium text-lg">Fotoğraf Galerisi</h2>
+            <h2 className="mt-8 font-medium text-lg">{t("gallery_title")}</h2>
             <div className="mt-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {allGallery.map((src, i) => (
                 <a
@@ -73,7 +77,7 @@ export default function Page({ params }: { params: { slug: string } }) {
         {/* Geri */}
         <div className="mt-10">
           <Link href="/projeler" className="text-sm hover:text-[var(--brand)]">
-            ← Tüm projelere geri dön
+            ← {t("back")}
           </Link>
         </div>
       </Container>
