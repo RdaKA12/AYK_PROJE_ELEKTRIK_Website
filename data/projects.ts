@@ -6,6 +6,8 @@ export type Project = {
   slug: string;
   cover: string;      // kapak görseli (ana sayfa formatıyla uyumlu)
   gallery?: string[]; // detay sayfasındaki görseller (/assets/<slug>/...)
+  title?: string;     // opsiyonel başlık (çevirilerden sağlanabilir)
+  desc?: string;      // opsiyonel açıklama (çevirilerden sağlanabilir)
 };
 
 const ASSET_BASE = "/assets";

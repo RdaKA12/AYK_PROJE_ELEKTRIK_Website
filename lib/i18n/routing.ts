@@ -7,10 +7,7 @@ export const {
   redirect,
   permanentRedirect,
   usePathname,
-  useRouter,
-  useSearchParams,
-  getPathname,
-  formatPathname
+  useRouter
 } = createNavigation({
   locales: i18nConfig.locales,
   defaultLocale: i18nConfig.defaultLocale,

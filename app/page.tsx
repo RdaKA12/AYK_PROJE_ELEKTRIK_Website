@@ -299,13 +299,8 @@ function QuoteForm() {
   };
 
   const renderLink = React.useCallback(
-    (chunks: React.ReactNode, attrs: Record<string, unknown>) => (
-      <a
-        href={(attrs?.href as string) ?? "/aydinlatma-metni"}
-        className={(attrs?.class as string) ?? "text-[var(--brand)] font-medium"}
-        target={attrs?.target as string | undefined}
-        rel={attrs?.rel as string | undefined}
-      >
+    (chunks: React.ReactNode) => (
+      <a href="/aydinlatma-metni" className="text-[var(--brand)] font-medium">
         {chunks}
       </a>
     ),
