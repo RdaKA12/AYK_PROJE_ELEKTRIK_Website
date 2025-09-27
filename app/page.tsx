@@ -273,7 +273,7 @@ Deneyimli mühendislerimiz, teknisyenlerimiz ve teknik ekibimizle malzeme seçim
       <section id="teklif" className="py-16 md:py-24 bg-neutral-900 text-white">
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-semibold">Projeniz için hızlı bir keşif ve fiyat teklifi alın</h2>
-          <p className="mt-2 text-neutral-300">Temel bilgileri bırakın; aynı gün dönüş yapalım.</p>
+          <p className="mt-2 text-neutral-300">Temel bilgileri bırakın; en kısa sürede dönüş yapalım.</p>
           <QuoteForm />
         </div>
       </section>
