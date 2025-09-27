@@ -14,6 +14,7 @@ export default function Page() {
   const t = useTranslations("home");
   const baseFeatures = t.raw("features") as string[];
   const marqueeItems = Array.from({ length: 4 }, () => baseFeatures).flat();
+  const projectMessages = t.raw("projects.items") as Record<string, { title: string; desc: string }>;
   return (
     <div className="min-h-screen bg-neutral-50 text-neutral-900">
       <style>{`:root{--brand:#D9251C;--brand-dark:#B01E16;--ink:#111111;--paper:#FAFAFA;--muted:#6B7280}`}</style>
@@ -218,25 +219,28 @@ export default function Page() {
             {t("projects.title")}
           </h2>
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-            {featuredProjects.map((p) => (
-              <Link
-                key={p.slug}
-                href={`/projeler/${p.slug}`}
-                className="group block rounded-2xl overflow-hidden border border-neutral-200 bg-neutral-50 hover:border-[var(--brand)] transition-colors"
-              >
-                <div className="aspect-[16/10] overflow-hidden">
-                  <img
-                    src={p.cover}
-                    alt={p.title}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-5">
-                  <h3 className="font-medium">{p.title}</h3>
-                  <p className="mt-1 text-sm text-neutral-600">{p.desc}</p>
-                </div>
-              </Link>
-            ))}
+            {featuredProjects.map((p) => {
+              const content = projectMessages[p.slug] ?? { title: p.slug, desc: "" };
+              return (
+                <Link
+                  key={p.slug}
+                  href={`/projeler/${p.slug}`}
+                  className="group block rounded-2xl overflow-hidden border border-neutral-200 bg-neutral-50 hover:border-[var(--brand)] transition-colors"
+                >
+                  <div className="aspect-[16/10] overflow-hidden">
+                    <img
+                      src={p.cover}
+                      alt={content.title}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="font-medium">{content.title}</h3>
+                    <p className="mt-1 text-sm text-neutral-600">{content.desc}</p>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
