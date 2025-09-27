@@ -1,0 +1,528 @@
+{
+  "projects": {
+    "references_rows": [
+      {
+        "title": "ANTALYA HAVALİMANI GENİŞLEME&İYİLEŞTİRME İŞİ YAKIT ÇİFTLİĞİ ELEKTRİK ANH.TESL.",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2024-2025"
+      },
+      {
+        "title": "ANTALYA EVA SOCİAL RESTAURANT ANAHTAR TESLİMİ PROJESİ",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2025"
+      },
+      {
+        "title": "ANTALYA SİDE ANTİK KENT ATHENA TAPINAĞI RENAVASYON PRJ ANAHTAR TESLİMİ",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2024-2025"
+      },
+      {
+        "title": "ANTALYA KONYAALTI 2.ETAP BEACH PARK PROJESİ ANAHTAR TESLİMİ",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2024"
+      },
+      {
+        "title": "ANTALYA HIDIRLIK KULESİ RENAVASYON PROJESİ ANAHTAR TESLİMİ",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2024-2025"
+      },
+      {
+        "title": "GAZİANTEP KAYNA SABUN VE PEKMEZ MÜZESİ RENAVASYON PROJESİ ANAHTAR TESLİMİ",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2024"
+      },
+      {
+        "title": "GAZİANTEP MİLLET BAHÇESİ PROJESİ RENAVASYON PROJESİ",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2024"
+      },
+      {
+        "title": "ANTALYA LARA LAGOM 71 ODA OTEL PROJESİ ANAHTAR TESLİMİ",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2024"
+      },
+      {
+        "title": "ANTALYA AYDOĞANLAR 150 KONUT PROJESİ ANAHTAR TESLİMİ",
+        "category_tr": "Elk.Taahhüt",
+        "category_en": "Elk.Taahhüt",
+        "category_de": "Elk.Taahhüt",
+        "category_ru": "Elk.Taahhüt",
+        "category_ar": "Elk.Taahhüt",
+        "year": "2023-2024"
+      },
+      {
+        "title": "ANTALYA DÖŞEMEALTI 18 TİP VİLLA  PROJESİ ANAHTAR TESLİMİ",
+        "category_tr": "Elk.Taahhüt",
+        "category_en": "Elk.Taahhüt",
+        "category_de": "Elk.Taahhüt",
+        "category_ru": "Elk.Taahhüt",
+        "category_ar": "Elk.Taahhüt",
+        "year": "2023-2024"
+      },
+      {
+        "title": "ANTALYA AYDOĞANLAR PLAZA PROJESİ ANAHTAR TESLİMİ",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2023"
+      },
+      {
+        "title": "ANTALYA SİDE ANTİK KENT HAMAM RENAVASYON PROJESİ ANAHTAR TESLİMİ",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2023"
+      },
+      {
+        "title": "ANTALYA BELEK ELA EXCELLENCE RESORT RENOVASYON-554 ODA",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2022-2023"
+      },
+      {
+        "title": "ANTALYA AZURA DELUXE SORGUN - 600 ODA",
+        "category_tr": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_en": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_de": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_ru": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_ar": "Elektri̇k & Mekani̇k Taahhüt",
+        "year": "2023"
+      },
+      {
+        "title": "ANTALYA JOLLY JOKER ( JJ PUB )",
+        "category_tr": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_en": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_de": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_ru": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_ar": "Elektri̇k & Mekani̇k Taahhüt",
+        "year": "2022"
+      },
+      {
+        "title": "BODRUM NO 81 HOTEL - 98 ODA",
+        "category_tr": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_en": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_de": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_ru": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_ar": "Elektri̇k & Mekani̇k Taahhüt",
+        "year": "2022"
+      },
+      {
+        "title": "ANTALYA ERMENEK İKİZ VİLLA PROJESİ",
+        "category_tr": "İnş & Mek & Elk Taahhüt",
+        "category_en": "İnş & Mek & Elk Taahhüt",
+        "category_de": "İnş & Mek & Elk Taahhüt",
+        "category_ru": "İnş & Mek & Elk Taahhüt",
+        "category_ar": "İnş & Mek & Elk Taahhüt",
+        "year": "2022"
+      },
+      {
+        "title": "ANTALYA AKDENİZ ÜNİVERSİTESİ TEKNOKENT TUSAŞ MERKEZ OFİS YERLEŞKESİ",
+        "category_tr": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_en": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_de": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_ru": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_ar": "Elektri̇k & Mekani̇k Taahhüt",
+        "year": "2022"
+      },
+      {
+        "title": "İZMİR ÇEŞME İKİZ VİLLA PROJESİ",
+        "category_tr": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_en": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_de": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_ru": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_ar": "Elektri̇k & Mekani̇k Taahhüt",
+        "year": "2021"
+      },
+      {
+        "title": "ANTALYA HAVA MEYDAN KOMUTANLIĞI OG ALT YAPI SİS. MODERNİZASYONU İŞİ",
+        "category_tr": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_en": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_de": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_ru": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_ar": "Elektri̇k & Mekani̇k Taahhüt",
+        "year": "2021"
+      },
+      {
+        "title": "MERSİN ÜNİVERSİTESİ ONKOLOJİ HASTANESİ - 252 YATAK",
+        "category_tr": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_en": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_de": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_ru": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_ar": "Elektri̇k & Mekani̇k Taahhüt",
+        "year": "2020"
+      },
+      {
+        "title": "MERSİN ÜNİVERSİTESİ EĞİTİM FAKÜLTESİ",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2019"
+      },
+      {
+        "title": "NİĞDE ÖMER HALİS DEMİR ÜNİVERSİTESİ İLAHİYAT FAKÜLTESİ",
+        "category_tr": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_en": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_de": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_ru": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_ar": "Elektri̇k & Mekani̇k Taahhüt",
+        "year": "2019"
+      },
+      {
+        "title": "NİĞDE ÖMER HALİS DEMİR ÜNİVERSİTESİ 3000 KİŞİLİK YURT",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2018"
+      },
+      {
+        "title": "ANTALYA FETHİYE 154 DÖNÜM TOPRAKSIZ MUZ SERA PRJ",
+        "category_tr": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_en": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_de": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_ru": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_ar": "Elektri̇k & Mekani̇k Taahhüt",
+        "year": "2018"
+      },
+      {
+        "title": "AZERBEYCAN 70 DÖNÜM TOPRAKSIZ SERA PRJ",
+        "category_tr": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_en": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_de": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_ru": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_ar": "Elektri̇k & Mekani̇k Taahhüt",
+        "year": "2018"
+      },
+      {
+        "title": "BURDUR MEHMET AKİF ERSOY ÜNİVERSİTESİ EĞİTİM FAKÜLTESİ",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2017"
+      },
+      {
+        "title": "BURDUR MEHMET AKİF ERSOY ÜNİVERSİTESİ REKTÖRLÜK BİNASI",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2017"
+      },
+      {
+        "title": "BURDUR MEHMET AKİF ERSOY ÜNİVERSİTESİ DİŞ HEKİMLİĞİ FAKÜLTESİ",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2016"
+      },
+      {
+        "title": "ANTALYA KUNDU IC GREEN PALACE OTEL TADİLAT - 450 ODA",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2016"
+      },
+      {
+        "title": "ANTALYA KUMLUCA ÖZEL MEDİKUM HASTANESİ",
+        "category_tr": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_en": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_de": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_ru": "Elektri̇k & Mekani̇k Taahhüt",
+        "category_ar": "Elektri̇k & Mekani̇k Taahhüt",
+        "year": "2016"
+      },
+      {
+        "title": "EXPO 2016 BİO-ÇEŞİTLİLİK MÜZESİ & 27 ADET ÜLKE BAHÇESİ",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2016"
+      },
+      {
+        "title": "ANTALYASPOR ATİLLA VEHBİ KONUK TESİSLERİ",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2015"
+      },
+      {
+        "title": "ANTALYA BELEK IC SANTAİ OTEL GÖL EVLERİ - 112 VİLLA",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2015"
+      },
+      {
+        "title": "MUĞLA BODRUM THOR OTEL - 650 ODA",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2014"
+      },
+      {
+        "title": "SOÇİ KIŞ OLİMPİYATLARI OTEL İNŞAATI - 450 ODA",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2014"
+      },
+      {
+        "title": "AZERBEYCAN QAŞALTI RIXOS OTEL - 124 ODA",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2014"
+      },
+      {
+        "title": "ANTALYA MURATPAŞA BELD.OLİMPİK HAVUZ TESİSLERİ",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2013"
+      },
+      {
+        "title": "ANTALYA MURATPAŞA BELD.EVLENDİRME SALONLARI TESİSLERİ",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2013"
+      },
+      {
+        "title": "ANTALYA BELEK IC SANTAİ OTEL 550 ODA TADİLAT",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2013"
+      },
+      {
+        "title": "ANTALYA BELDİBİ KAZAKİSTAN CUMHURBAŞKANLIĞI VİLLA İNŞAATI",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2013"
+      },
+      {
+        "title": "ANTALYA BELEK SPİCE OTEL FUTBOL SAHASI AYDINLATMASI",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2012"
+      },
+      {
+        "title": "IRAK DUHOK RIXOS OTEL - 278 ODA",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2012"
+      },
+      {
+        "title": "ANTALYA BELEK MARITIM OTEL PERSONEL LOJMANI",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2012"
+      },
+      {
+        "title": "İZMİR ÖZEL MEDİFEMA HASTANESİ",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2012"
+      },
+      {
+        "title": "SAKARYA ELMAS OTEL - 300 ODA",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2011"
+      },
+      {
+        "title": "IRAK ERBİL DEVLET İSTİHBARAT TESİSLERİ",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2011"
+      },
+      {
+        "title": "İZMİR ÖZEL CİHAN HASTANESİ",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2011"
+      },
+      {
+        "title": "KÜTAHYA ÖZEL KENT HASTANESİ",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2010"
+      },
+      {
+        "title": "İSTANBUL TOKİ İMAM HATİP LİSESİ",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2010"
+      },
+      {
+        "title": "MANİSA SALİHLİ ÖZEL GÜVEN HASTANESİ",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2009"
+      },
+      {
+        "title": "ANTALYA BELEK MARITIM OTEL KONFERANS SALONU",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2009"
+      },
+      {
+        "title": "ANTALYA BELEK NOBİLİS GOLF&RESORT OTEL",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2008"
+      },
+      {
+        "title": "ANTALYA PRİNCE GROUP PLAZA",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2008"
+      },
+      {
+        "title": "ANTALYA BÜYÜK ŞEHİR BELEDİYESİ DÜDEN ŞELALESİ",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2007"
+      },
+      {
+        "title": "ANTALYA BELEK NOBİLİS GOLF&RESORT OTEL TADİLAT VE SPA İMALATI",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2007"
+      },
+      {
+        "title": "ANTALYA BÜYÜKŞEHİR BELEDİYESİ ASMEK BİNALARI",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2006"
+      },
+      {
+        "title": "ANTALYA ALTINPINAR BOYA A.Ş",
+        "category_tr": "Elektri̇k Taahhüt",
+        "category_en": "Electrical Contracting",
+        "category_de": "Elektro-Generalunternehmer",
+        "category_ru": "Электромонтаж (генподряд)",
+        "category_ar": "مقاولات كهربائية",
+        "year": "2006"
+      }
+    ]
+  }
+}

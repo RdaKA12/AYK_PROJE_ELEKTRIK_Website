@@ -1,0 +1,347 @@
+{
+  "header": {
+    "brand": "AYK Projekt Elektrik",
+    "nav": {
+      "home": "Startseite",
+      "about": "Über uns",
+      "services": "Leistungen",
+      "projects": "Projekte",
+      "contact": "Kontakt"
+    },
+    "topbar": {
+      "email": "info@aykproje.com.tr",
+      "address": "Konuksever Mah. Emrah Cad. Nr.68/A, Muratpaşa / Antalya"
+    },
+    "menu": { "title": "Menü" },
+    "aria": { "menu_open": "Menü öffnen", "menu_close": "Menü schließen" }
+  },
+
+  "footer": {
+    "company_full": "AYK Projekt Ingenieurwesen Elektrik Industrie und Handel GmbH",
+    "rights": "Alle Rechte vorbehalten.",
+    "links": {
+      "kvkk": "KVKK",
+      "privacy": "Datenschutzhinweis",
+      "contact": "Kontakt"
+    }
+  },
+
+  "home": {
+    "hero": {
+      "title": "Vertrauenswürdige Ingenieurkunst, nachhaltige Energie, bleibender Wert.",
+      "subtitle": "Über 25 Jahre Erfahrung in der Elektrotechnik, starkes Engineering und schlüsselfertige Projekte.",
+      "prev": "Zurück",
+      "next": "Weiter"
+    },
+    "cta": { "quote": "Schnelles Angebot erhalten", "projects": "Projekte" },
+    "features": [
+      "25+ Jahre Erfahrung",
+      "50+ Großprojekte",
+      "Nationale & internationale Referenzen",
+      "Pünktliche Lieferung und Service",
+      "Expertenteam für PV & Vertragsarbeiten",
+      "Effektive und faire Preisgestaltung",
+      "Hohe Qualitätsstandards",
+      "Umfassende Partnerschaften"
+    ],
+    "about": {
+      "title": "Über uns",
+      "body": "AYK Projekt Elektrik GmbH ist ein Unternehmen, das innovative und kundenorientierte Dienstleistungen im Bereich der Elektrotechnik anbietet. Seit unserer Gründung verfolgen wir das Ziel, durch den Einsatz moderner Technologien und die Expertise unseres erfahrenen Teams die geeignetsten und effizientesten Lösungen zu liefern. Unser Leistungsspektrum ist breit gefächert und soll Projekten jeder Größenordnung Mehrwert bieten. Wir sind in vielen Bereichen tätig – von der Planung und Umsetzung elektrischer Infrastrukturen bis hin zu Automatisierungs- und Energieeffizienzprojekten. Darüber hinaus entwerfen und fertigen wir Verteilungs-, Steuerungs- und Kompensationsschaltschränke für Mittel- und Niederspannungssysteme. In Zusammenarbeit mit führenden Marken der Branche bieten wir unseren Kunden hochwertige Produkte im Einzel- und Großhandel an. Wir verfolgen technologische Entwicklungen genau und legen Wert auf Kundenzufriedenheit, indem wir unsere Projekte termingerecht und vollständig liefern. Mit unseren erfahrenen Ingenieuren, Technikern und Fachkräften bieten wir alle Dienstleistungen, die Sie bei der Materialauswahl, Projektierung, Standortbesichtigung und Montage benötigen. Wir streben an, unsere Position in der Branche durch den kontinuierlichen Ausbau unseres Servicenetzwerks zu stärken.",
+      "vision": { "title": "Unsere Vision", "body": "Unsere Vision ist es, das führende Unternehmen in nationalen und internationalen Projekten zu sein, das für Innovation, Qualität und Zuverlässigkeit bekannt ist. Durch die enge Verfolgung technologischer Entwicklungen und die Nutzung der Expertise unseres erfahrenen Teams wollen wir die Kundenzufriedenheit maximieren, nachhaltige Lösungen anbieten, die den Sektor prägen, und die Branchenstandards erhöhen." },
+      "mission": { "title": "Unsere Mission", "body": "Unsere Mission bei AYK Projekt Elektrik ist es, innovative, effiziente und qualitativ hochwertige Ingenieurlösungen anzubieten, die die Bedürfnisse unserer Kunden vollständig erfüllen. Durch die Kombination moderner Technologien mit der Expertise unseres erfahrenen Teams wollen wir Projekten jeder Größenordnung Mehrwert verleihen und zur Entwicklung der Branche beitragen. Mit Professionalität, Zuverlässigkeit und einem kundenorientierten Ansatz streben wir an, unsere Projekte termingerecht und vollständig abzuschließen und verpflichten uns, die höchsten Qualitätsstandards einzuhalten." }
+    },
+    "projects": {
+      "title": "Ausgewählte Projekte",
+      "items": {
+        "side_athena": { "title": "Antalya Side Athena Tempel", "desc": "Elektrische Infrastruktur und Beleuchtungsanwendungen im historischen Bauwerk" },
+        "konyaalti_sahili": { "title": "Antalya Konyaaltı Küstenstreifen", "desc": "Beleuchtung und Energieinfrastruktur entlang der Küste" },
+        "hava_meydan": { "title": "Antalya Luftwaffenstützpunkt", "desc": "Elektroarbeiten und Modernisierung in militärischer Anlage" },
+        "lider_tohum_ges": { "title": "Antalya Lider Tohum", "desc": "25kW PV-Dachprojekt für Gewächshaus" },
+        "ela_excellence": { "title": "Ela Excellence Resort Hotel", "desc": "Elektroinstallationen in Hotelanlagen" },
+        "gaziantep_sabunhan": { "title": "Gaziantep Kayna Seifen- und Melassemuseum", "desc": "Beleuchtungs- und Elektroinstallationen in historischem Gebäude" }
+      }
+    },
+    "quote": {
+      "title": "Erhalten Sie eine schnelle Besichtigung und ein Angebot für Ihr Projekt",
+      "subtitle": "Hinterlassen Sie die Basisinformationen; wir melden uns noch am selben Tag.",
+      "form": {
+        "name": "Vollständiger Name *",
+        "contact": "E-Mail / Telefon *",
+        "type": "Projekttyp (Materialkauf, Vertragsarbeit, PV, Wartung...) *",
+        "message": "Kurze Beschreibung *"
+      },
+      "consent_apply_html": "Ich habe den <a href=\"aydinlatma-metni\" class=\"text-[var(--brand)] font-medium\">Datenschutzhinweis</a> gelesen und <b>stimme zu</b>, dass meine personenbezogenen Daten zum Zweck der Bearbeitung meiner Anfrage verarbeitet werden.",
+      "consent_contact": "Ich stimme zu, dass ich bezüglich meines Projekts kontaktiert werde.",
+      "consent_marketing": "Ich gebe <b>ausdrückliche Zustimmung</b> für Marketing-/Informationszwecke. (Optional)",
+      "submit": "Angebot anfordern",
+      "alert_ok": "Ihre Anfrage wurde erhalten. Wir werden uns so schnell wie möglich bei Ihnen melden.",
+      "alert_err": "Ein Fehler ist aufgetreten."
+    }
+  },
+
+  "about": {
+    "meta": {
+      "title": "Über uns | AYK Projekt Elektrik",
+      "description": "Vision, Mission, Werte und Highlights von AYK Projekt Elektrik. Seit 2018; über 25 Jahre Ingenieurserfahrung in Elektroinstallationen, Kompensation, Automatisierung und PV-Projekten."
+    },
+    "title": "Über uns",
+    "summary": "AYK Projekt Elektrik GmbH ist ein Unternehmen, das innovative und kundenorientierte Dienstleistungen im Bereich der Elektrotechnik anbietet. Seit unserer Gründung haben wir uns zum Ziel gesetzt, durch die Kombination moderner Technologien mit dem Fachwissen unseres erfahrenen Teams die geeignetsten und effizientesten Lösungen zu liefern. Unser Leistungsspektrum ist breit und soll Projekten jeder Größenordnung Mehrwert bieten. Wir sind in vielen Bereichen tätig, von der Planung und Umsetzung elektrischer Infrastrukturen bis hin zu Automatisierungs- und Energieeffizienzprojekten. Darüber hinaus entwerfen und fertigen wir Verteilungs-, Steuerungs- und Kompensationsschaltschränke für Mittel- und Niederspannungssysteme. In Zusammenarbeit mit führenden Marken bieten wir unseren Kunden hochwertige Produkte im Einzel- und Großhandel für Elektromaterialien an. Wir verfolgen technologische Entwicklungen genau und legen Wert auf Kundenzufriedenheit, indem wir unsere Projekte termingerecht und vollständig liefern. Mit unseren erfahrenen Ingenieuren, Technikern und unserem technischen Team bieten wir alle Dienstleistungen, die Sie bei der Materialauswahl, Projektierung, Standortbesichtigung und Montage benötigen. Wir streben an, unsere Position in der Branche durch den kontinuierlichen Ausbau unseres Servicenetzwerks zu stärken.",
+    "stats": {
+      "founded": "Gründungsjahr",
+      "engineering_years": "Jahre Ingenieurserfahrung",
+      "completed_projects": "Abgeschlossene Projekte",
+      "csat_goal": "Ziel Kundenzufriedenheit"
+    },
+    "vision": {
+      "title": "Unsere Vision",
+      "body": "Unsere Vision ist es, das führende Unternehmen in nationalen und internationalen Projekten zu sein, das für Innovation, Qualität und Zuverlässigkeit bekannt ist. Durch die enge Verfolgung technologischer Entwicklungen und die Nutzung der Expertise unseres erfahrenen Teams wollen wir die Kundenzufriedenheit maximieren, nachhaltige Lösungen anbieten, die den Sektor prägen, und die Branchenstandards erhöhen."
+    },
+    "mission": {
+      "title": "Unsere Mission",
+      "body": "Unsere Mission bei AYK Projekt Elektrik ist es, innovative, effiziente und qualitativ hochwertige Ingenieurlösungen anzubieten, die die Bedürfnisse unserer Kunden vollständig erfüllen. Durch die Kombination moderner Technologien mit der Expertise unseres erfahrenen Teams wollen wir Projekten jeder Größenordnung Mehrwert verleihen und zur Entwicklung der Branche beitragen. Mit Professionalität, Zuverlässigkeit und einem kundenorientierten Ansatz streben wir an, unsere Projekte termingerecht und vollständig abzuschließen und verpflichten uns, die höchsten Qualitätsstandards einzuhalten."
+    },
+    "why": {
+      "title": "Warum AYK Projekt Elektrik?",
+      "items": [
+        "25+ Jahre Ingenieurserfahrung, seit 2018 Unternehmensstruktur",
+        "Breites Leistungsspektrum von Mittel-/Niederspannung bis PV-Projekte",
+        "Marken-Elektromaterialverkauf und transparente Kostenkontrolle",
+        "Disziplin im Projektmanagement, pünktliche Lieferung und nachhaltige Lösungen",
+        "Langfristige Kundenbetreuung mit Wartung, Überwachung und Reporting"
+      ]
+    },
+    "values": {
+      "title": "Unsere Werte",
+      "items": [
+        "Zuverlässigkeit und Transparenz",
+        "Technische Genauigkeit und Qualität",
+        "Kundenorientierung",
+        "Arbeitssicherheit und gesetzliche Konformität",
+        "Nachhaltigkeit und Effizienz",
+        "Kontinuierliche Verbesserung und Innovation"
+      ]
+    },
+    "cta": { "projects": "Unsere Projekte ansehen", "contact": "Kontakt aufnehmen" }
+  },
+  "services": {
+    "meta": {
+      "title": "Leistungen | AYK Projekt Elektrik",
+      "description": "Projektberatung & Ingenieurwesen, Elektroinstallation, Verkauf von Elektromaterial, Schwachstromsysteme, Photovoltaikanlagen und Wartung & Service."
+    },
+    "title": "Leistungen",
+    "intro": "Wir bieten ingenieurorientierte Dienstleistungen, die auf die Bedürfnisse Ihres Projekts zugeschnitten sind. Unten finden Sie unsere Hauptleistungen und deren Umfang.",
+    "cards": {
+      "proje-danismanlik-muhendislik": {
+        "title": "Projektberatung & Ingenieurwesen",
+        "desc": "Besichtigung, Projektierung, Spezifikationen und Leistungsverzeichnisse, Kostenoptimierung, Bauüberwachung.",
+        "bullets": [
+          "Standortbesichtigung und technischer Bericht",
+          "NS/MS Einliniendiagramme und Ausführungspläne",
+          "Leistungsverzeichnis und Mengenermittlung",
+          "Budget-Qualitätsoptimierung",
+          "Koordination von Auftragnehmern/Herstellern"
+        ]
+      },
+      "elektrik-elektronik-taahhut": {
+        "title": "Elektroinstallation",
+        "desc": "Infrastruktur, Verkabelung, Schaltschränke, Inbetriebnahme und Prüfungen.",
+        "bullets": [
+          "MS/NS Verkabelung und Verteilung",
+          "Beleuchtungs- und Steckdosenleitungen",
+          "Schaltschrankfertigung/-montage",
+          "Erdung und Blitzschutz",
+          "Prüfung und Inbetriebnahme"
+        ]
+      },
+      "elektrik-malzemesi-satisi": {
+        "title": "Verkauf von Elektromaterial",
+        "desc": "Lieferung von Markenprodukten; Einzelhandel und Großhandel mit Preisvorteilen.",
+        "bullets": [
+          "Kabel, Sicherungen, Schutzschalter, Schütze",
+          "Leuchten und Beleuchtungskörper",
+          "Schaltschrankzubehör",
+          "Automatisierungs- und Messgeräte"
+        ]
+      },
+      "zayif-akim-sistemleri": {
+        "title": "Schwachstromsysteme",
+        "desc": "Sicherheits-, Kommunikations- und Netzwerkinfrastrukturen.",
+        "bullets": [
+          "CCTV- und IP-Kameras",
+          "Zutrittskontrolle und Drehkreuze",
+          "Brandmelde- und Alarmanlagen",
+          "Daten- und Netzwerkkabel"
+        ]
+      },
+      "gunes-enerji-sistemleri": {
+        "title": "Photovoltaikanlagen (PV)",
+        "desc": "Schlüsselfertige Planung, Installation und Überwachung von Dach- und Freiflächen-PV-Projekten.",
+        "bullets": [
+          "Voruntersuchung und Produktionssimulation",
+          "Statische und elektrische Planung",
+          "Montage und Inbetriebnahme",
+          "Fernüberwachung und Reporting"
+        ]
+      },
+      "bakim-servis": {
+        "title": "Wartung & Service",
+        "desc": "Regelmäßige Wartung, Störungsbehebung und Leistungsoptimierung.",
+        "bullets": [
+          "Kontrollen mit Wärmebildkamera",
+          "Kompensationsüberwachung und -einstellung",
+          "Ersatzteile und Reparaturen",
+          "Regelmäßige Berichterstattung"
+        ]
+      }
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "items": [
+        {
+          "q": "Wie läuft Ihr Besichtigungs- und Angebotsprozess ab?",
+          "a": "Nach dem Erstgespräch wird innerhalb von 24–72 Stunden eine Standortbesichtigung geplant. Sobald der technische Umfang geklärt ist, wird noch am selben Tag ein Kurzan gebot erstellt und innerhalb von 2–5 Werktagen ein detailliertes technisches und finanzielles Angebot bereitgestellt."
+        },
+        {
+          "q": "Wie lange dauert ein PV-Projekt im Durchschnitt?",
+          "a": "Je nach Größe (Dach oder Freifläche) dauert es zwischen 25 und 60 Tagen. Es umfasst Besichtigung, Projektierung, Genehmigungen, Installation und Inbetriebnahme."
+        },
+        {
+          "q": "Was umfasst Wartung und Garantie?",
+          "a": "Es gilt die Arbeits- und Herstellergarantie. Mit einem Wartungsvertrag werden Leistungsüberwachung, Wärmebildkontrolle und Berichterstattung bereitgestellt."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Schnelles Angebot für Ihr Projekt",
+      "subtitle": "Übermitteln Sie die Basisinformationen; wir kontaktieren Sie noch am selben Tag.",
+      "contact": "Kontakt aufnehmen",
+      "form": "Formular ausfüllen"
+    }
+  },
+  "projects": {
+    "meta": {
+      "title": "Projekte | AYK Projekt Elektrik",
+      "description": "Ausgewählte Projektbilder und unsere Referenzliste."
+    },
+    "title": "Projekte",
+    "intro": "Unten finden Sie unsere hervorgehobenen Projekte mit Fotos sowie unsere umfassende Referenzliste.",
+    "references": {
+      "title": "Unsere Referenzen",
+      "subtitle": "Eine Auswahl unserer abgeschlossenen Arbeiten zwischen 2006–2025."
+    },
+    "table": { "no": "#", "project": "Projekt", "category": "Kategorie", "year": "Jahr" },
+    "cta": "Angebot für Ihr Projekt anfordern"
+  },
+
+  "projects_detail": {
+    "breadcrumbs": { "projects": "Projekte" },
+    "gallery_title": "Fotogalerie",
+    "back": "Zurück zu allen Projekten"
+  },
+
+  "contact": {
+    "meta": {
+      "title": "Kontakt | AYK Projekt Elektrik",
+      "description": "AYK Projekt Elektrik Kontaktinformationen, Social-Media-Accounts und Angebotsformular."
+    },
+    "title": "Kontakt",
+    "intro": "Sie können uns über die folgenden Informationen erreichen oder schnell das Formular ausfüllen.",
+    "contact_info": {
+      "title": "Kontaktinformationen",
+      "address": "Konuksever Mah. Emrah Cad. Nr.68/A, Muratpaşa / Antalya"
+    },
+    "social": { "title": "Soziale Medien" },
+    "form": { "title": "Kontaktieren Sie uns" }
+  },
+  "kvkk": {
+    "meta": {
+      "title": "KVKK | AYK Projekt Elektrik",
+      "description": "Informationsschrift gemäß dem Gesetz Nr. 6698 zum Schutz personenbezogener Daten."
+    },
+    "title": "Gesetz zum Schutz personenbezogener Daten (KVKK)",
+    "intro": "Gemäß dem Gesetz Nr. 6698 legt die AYK Projekt Elektrik GmbH großen Wert auf den Schutz Ihrer personenbezogenen Daten. Dieser Text wurde erstellt, um die Zwecke der Datenverarbeitung, die Aufbewahrungsdauer und Ihre Rechte zu erläutern.",
+    "sections": {
+      "controller": {
+        "title": "Datenverantwortlicher",
+        "body": "Die AYK Projekt Elektrik GmbH verarbeitet Ihre personenbezogenen Daten als 'Datenverantwortlicher' im Rahmen des KVKK. Unsere Kontaktdaten finden Sie",
+        "link": "hier"
+      },
+      "purposes": {
+        "title": "Zwecke der Verarbeitung personenbezogener Daten",
+        "body": "Ihre Daten werden im Rahmen von Kundenbeziehungen, Angeboten, Vertragsprozessen, zur Erfüllung gesetzlicher Verpflichtungen und zur Kundenzufriedenheit verarbeitet."
+      },
+      "transfer": {
+        "title": "Übermittlung",
+        "body": "Ihre Daten können nur im Rahmen der gesetzlichen Vorschriften und ausschließlich zu den angegebenen Zwecken an unsere Geschäftspartner, Behörden und Dienstleister weitergegeben werden."
+      },
+      "retention": {
+        "title": "Aufbewahrungsdauer",
+        "body": "Ihre personenbezogenen Daten werden so lange gespeichert, wie es die gesetzlichen Vorschriften vorsehen oder der Verarbeitungszweck besteht; anschließend werden sie sicher vernichtet."
+      },
+      "rights": {
+        "title": "Ihre Rechte",
+        "items": [
+          "Zu erfahren, ob Ihre Daten verarbeitet werden",
+          "Auskunft zu erhalten, wenn sie verarbeitet wurden",
+          "Zu erfahren, ob sie zweckgemäß verwendet werden",
+          "Berichtigung zu verlangen, wenn sie unvollständig/falsch sind",
+          "Löschung oder Vernichtung zu verlangen",
+          "Benachrichtigung zu verlangen, wenn sie an Dritte weitergegeben wurden"
+        ]
+      }
+    },
+    "footer": { "text": "Um Ihre Rechte auszuüben oder detaillierte Informationen zu erhalten", "link": "Kontakt" }
+  },
+
+  "privacy": {
+    "meta": {
+      "title": "Datenschutzhinweis | AYK Projekt Elektrik",
+      "description": "Datenschutzhinweis zur Verarbeitung personenbezogener Daten durch die AYK Projekt Elektrik GmbH."
+    },
+    "title": "Datenschutzhinweis zur Verarbeitung personenbezogener Daten",
+    "intro": "Gemäß dem Gesetz Nr. 6698 wurde dieser Datenschutzhinweis von der AYK Projekt Elektrik GmbH als Datenverantwortlicher zur Verarbeitung Ihrer personenbezogenen Daten erstellt.",
+    "kvkk_link_text": "Sie können unseren KVKK-Text einsehen",
+    "sections": {
+      "controller": {
+        "title": "Datenverantwortlicher",
+        "body": "Die AYK Projekt Elektrik GmbH verarbeitet Ihre personenbezogenen Daten als Datenverantwortlicher. Für Kontakt",
+        "link": "Kontakt"
+      },
+      "collection": {
+        "title": "Erhebungsmethode",
+        "body": "Ihre Daten können über Webformulare, E-Mail-/Telefonkorrespondenz, Verträge, Angebote, Standortbesichtigungen und Serviceprozesse, automatisch oder teilweise automatisch, in physischer und elektronischer Form erhoben werden."
+      },
+      "purposes": {
+        "title": "Zwecke der Verarbeitung",
+        "items": [
+          "Durchführung von Angebots-, Besichtigungs-, Vertrags- und Projektmanagementprozessen",
+          "Kundenbeziehungen und Qualitätsmanagement",
+          "Erfüllung gesetzlicher Verpflichtungen und Meldungen an Behörden",
+          "Finanz- und Buchhaltungsvorgänge (Rechnungen, Inkasso usw.)",
+          "Betriebssicherheit, Wartung und Kontrollaktivitäten"
+        ]
+      },
+      "legal": {
+        "title": "Rechtsgrundlagen",
+        "body": "Im Rahmen der Artikel 5 und 6 des KVKK; gesetzliche Verpflichtungen, Erforderlichkeit für die Vertragsdurchführung, Erfüllung rechtlicher Pflichten, berechtigtes Interesse des Datenverantwortlichen und, falls erforderlich, ausdrückliche Einwilligung."
+      },
+      "transfer": {
+        "title": "Übermittlung",
+        "body": "Ihre personenbezogenen Daten können an unsere Dienstleister, Geschäftspartner, gesetzlich befugte öffentliche Institutionen und in zwingenden Fällen an inländische Drittanbieter von Hosting-/IT-Dienstleistungen weitergegeben werden, im Einklang mit den KVKK-Bestimmungen und ausschließlich zweckgebunden."
+      },
+      "retention": {
+        "title": "Aufbewahrungsdauer",
+        "body": "Ihre Daten werden für die in den Vorschriften vorgesehenen Zeiträume und/oder für die Dauer des Verarbeitungszwecks gespeichert; danach werden sie gemäß den Vorschriften gelöscht, vernichtet oder anonymisiert."
+      },
+      "rights": {
+        "title": "Rechte der betroffenen Person",
+        "body": "Nach Artikel 11 des KVKK haben Sie das Recht, Auskunft über Ihre personenbezogenen Daten zu verlangen, deren Berichtigung, Löschung/Vernichtung zu beantragen, zu erfahren, ob sie zweckgemäß verwendet werden, und im Falle einer Weitergabe die Benachrichtigung zu verlangen."
+      },
+      "application": {
+        "title": "Antragsverfahren",
+        "body": "Sie können Ihre Anträge bezüglich Ihrer Rechte zusammen mit Dokumenten zur Identitätsüberprüfung schriftlich oder über KEP, sichere elektronische Signatur oder über die vom Unternehmen festgelegten Kanäle übermitteln. Anträge werden so schnell wie möglich gemäß den gesetzlichen Bestimmungen bearbeitet."
+      }
+    },
+    "footer": { "text": "Für detaillierte Informationen oder Anträge", "link": "Über unsere Kontaktseite erreichen Sie uns" }
+  }
+}

@@ -1,0 +1,349 @@
+{
+  "header": {
+    "brand": "AYK Proje Elektrik",
+    "nav": {
+      "home": "Ana Sayfa",
+      "about": "Hakkımızda",
+      "services": "Hizmetler",
+      "projects": "Projeler",
+      "contact": "İletişim"
+    },
+    "topbar": {
+      "email": "info@aykproje.com.tr",
+      "address": "Konuksever Mah. Emrah Cad. No:68/A, Muratpaşa / Antalya"
+    },
+    "menu": { "title": "Menü" },
+    "aria": { "menu_open": "Menüyü aç", "menu_close": "Menüyü kapat" }
+  },
+
+  "footer": {
+    "company_full": "AYK Proje Mühendislik Elektrik San. ve Tic. Ltd. Şti.",
+    "rights": "Tüm hakları saklıdır.",
+    "links": {
+      "kvkk": "KVKK",
+      "privacy": "Aydınlatma Metni",
+      "contact": "İletişim"
+    }
+  },
+
+  "home": {
+    "hero": {
+      "title": "Güvenilir mühendislik, sürdürülebilir enerji, kalıcı değer.",
+      "subtitle": "Elektrikte 25+ yıllık deneyim, güçlü mühendislik ve anahtar teslim projeler.",
+      "prev": "Önceki",
+      "next": "Sonraki"
+    },
+    "cta": { "quote": "Hızlı Teklif Al", "projects": "Projeler" },
+    "features": [
+      "25+ yıl deneyim",
+      "50+ büyük ölçekli proje",
+      "Ulusal & uluslararası referanslar",
+      "Zamanında teslim ve servis",
+      "GES ve elektrik taahhütte uzman ekip",
+      "Etkili ve uygun fiyat politikası",
+      "Yüksek kalite standartları",
+      "Kapsamlı çözüm ortaklığı"
+    ],
+    "about": {
+      "title": "Hakkımızda",
+      "body": "AYK Proje Elektrik Ltd. Şti., elektrik mühendisliği alanında yenilikçi ve müşteri odaklı hizmetler sunan bir firmadır... (mevcut metninin tamamı buraya)\n\nHizmet yelpazemiz geniş olup... (tam paragraf)\n\nSektörün önde gelen markalarıyla... (tam paragraf)\n\nDeneyimli mühendislerimiz... (tam paragraf)",
+      "vision": { "title": "Vizyonumuz", "body": "Vizyonumuz; sektörde inovasyon, kalite ve güvenilirlik ile anılan ulusal ve uluslararası projelerde tercih edilen lider firma olmaktır..." },
+      "mission": { "title": "Misyonumuz", "body": "AYK Proje Elektrik olarak misyonumuz, müşterilerimizin ihtiyaçlarını tam olarak karşılayan yenilikçi..." }
+    },
+    "projects": {
+      "title": "Seçili Projeler",
+      "items": {
+        "side_athena": { "title": "Antalya Side Athena Tapınağı", "desc": "Tarihi eserde elektrik altyapısı ve aydınlatma uygulamaları" },
+        "konyaalti_sahili": { "title": "Antalya Konyaaltı Sahili", "desc": "Sahil bandı aydınlatma ve enerji altyapısı" },
+        "hava_meydan": { "title": "Antalya Hava Meydan Komutanlığı", "desc": "Askeri tesis elektrik taahhüt ve modernizasyon çalışmaları" },
+        "lider_tohum_ges": { "title": "Antalya Lider Tohum", "desc": "25kW sera üstü çatı GES projesi" },
+        "ela_excellence": { "title": "Ela Excellence Resort Hotel", "desc": "Konaklama tesisinde elektrik uygulamaları" },
+        "gaziantep_sabunhan": { "title": "Gaziantep Kayna Sabun ve Pekmez Müzesi", "desc": "Tarihi yapıda aydınlatma ve elektrik çözümleri" }
+      }
+    },
+    "quote": {
+      "title": "Projeniz için hızlı bir keşif ve fiyat teklifi alın",
+      "subtitle": "Temel bilgileri bırakın; aynı gün dönüş yapalım.",
+      "form": {
+        "name": "Ad Soyad *",
+        "contact": "E-posta / Telefon *",
+        "type": "Proje türü (Malzeme Alımı, Taahhüt, GES, Bakım...) *",
+        "message": "Kısa açıklama *"
+      },
+      "consent_apply_html": "<a href=\"aydinlatma-metni\" class=\"text-[var(--brand)] font-medium\">Aydınlatma Metni</a>’ni okudum; başvurumun değerlendirilmesi amacıyla kişisel verilerimin işlenmesine <b>onay veriyorum</b>.",
+      "consent_contact": "Projem hakkında tarafımla iletişime geçilmesine onay veriyorum.",
+      "consent_marketing": "Pazarlama/bilgilendirme amaçlı iletişim için <b>açık rıza</b> veriyorum. (İsteğe bağlı)",
+      "submit": "Teklif Talep Et",
+      "alert_ok": "Talebiniz alındı. En kısa sürede dönüş yapacağız.",
+      "alert_err": "Bir hata oluştu."
+    }
+  },
+
+  "about": {
+    "meta": {
+      "title": "Hakkımızda | AYK Proje Elektrik",
+      "description": "AYK Proje Elektrik’in vizyonu, misyonu, değerleri ve öne çıkan yönleri. 2018’den beri; 25+ yıllık mühendislik tecrübesiyle elektrik taahhüt, kompanzasyon, otomasyon ve GES projeleri."
+    },
+    "title": "Hakkımızda",
+    "summary": "AYK Proje Elektrik Ltd. Şti., elektrik mühendisliği alanında yenilikçi ve müşteri odaklı hizmetler sunan bir firmadır. Kuruluşumuzdan bu yana, modern teknolojileri ve deneyimli ekibimizin uzmanlığını bir araya getirerek müşterilerimize en uygun ve verimli çözümleri sunmayı hedefliyoruz. Hizmet yelpazemiz geniş olup, her ölçekteki projeye değer katmayı amaçlıyoruz. Elektrik altyapı tasarımı ve uygulamasından otomasyon sistemleri ve enerji verimliliği projelerine kadar birçok alanda faaliyet gösteriyoruz. Ayrıca (OG) Orta Gerilim ve (AG) Alçak Gerilim sistemlerinde dağıtım, kumanda, kompanzasyon panolarının tasarım ve üretimini gerçekleştiriyoruz. Sektörün önde gelen markalarıyla iş birliği yaparak, perakende ve toptan elektrik malzemesi satışında müşterilerimize kaliteli ürünler sunuyoruz. Teknolojiyi yakından takip ediyor ve müşteri memnuniyetini ön planda tutarak projelerimizi zamanında ve eksiksiz teslim etmeye özen gösteriyoruz. Deneyimli mühendislerimiz, teknisyenlerimiz ve teknik ekibimizle malzeme seçimi, projelendirme, saha keşfi ve montaj konularında ihtiyaç duyduğunuz tüm hizmetleri sağlıyoruz. Hizmet ağımızı sürekli genişleterek sektördeki konumumuzu güçlendirmeyi amaçlıyoruz.",
+    "stats": {
+      "founded": "Kuruluş Yılı",
+      "engineering_years": "Yıl Mühendislik Deneyimi",
+      "completed_projects": "Tamamlanan Proje",
+      "csat_goal": "Müşteri Memnuniyeti Hedefi"
+    },
+    "vision": {
+      "title": "Vizyonumuz",
+      "body": "Vizyonumuz; sektörde inovasyon, kalite ve güvenilirlik ile anılan ulusal ve uluslararası projelerde tercih edilen lider firma olmaktır. Teknolojik gelişmeleri yakından takip ederek ve deneyimli ekibimizin uzmanlığını kullanarak müşteri memnuniyetini en üst düzeye çıkarmayı, sektöre yön veren sürdürülebilir çözümler sunmayı ve sektördeki standartları yükseltmeyi amaçlıyoruz."
+    },
+    "mission": {
+      "title": "Misyonumuz",
+      "body": "AYK Proje Elektrik olarak misyonumuz, müşterilerimizin ihtiyaçlarını tam olarak karşılayan yenilikçi, verimli ve yüksek kaliteli mühendislik çözümleri sunmaktır. Modern teknolojileri ve deneyimli ekibimizin uzmanlığını birleştirerek, her ölçekteki projeye değer katmayı ve sektörün gelişimine katkıda bulunmayı amaçlıyoruz. Profesyonellik, güvenilirlik ve müşteri odaklı yaklaşımımızla hizmetlerimizi sunarken, projelerimizi zamanında ve eksiksiz teslim etmeye özen gösteriyor; en yüksek kalite standartlarını korumayı taahhüt ediyoruz."
+    },
+    "why": {
+      "title": "Neden AYK Proje Elektrik?",
+      "items": [
+        "25+ yıllık mühendislik deneyimi, 2018’den bu yana kurumsal yapılanma",
+        "OG/AG altyapıdan GES projelerine kadar geniş hizmet yelpazesi",
+        "Marka garantili elektrik malzemesi satışı ve şeffaf maliyet yönetimi",
+        "Proje yönetiminde disiplin, zamanında teslim ve sürdürülebilir çözümler",
+        "Bakım, izleme ve raporlama ile uzun vadeli müşteri desteği"
+      ]
+    },
+    "values": {
+      "title": "Değerlerimiz",
+      "items": [
+        "Güvenilirlik ve şeffaflık",
+        "Teknik doğruluk ve kalite",
+        "Müşteri memnuniyeti odaklılık",
+        "İş güvenliği ve mevzuata uyum",
+        "Sürdürülebilirlik ve verimlilik",
+        "Sürekli gelişim ve yenilikçilik"
+      ]
+    },
+    "cta": { "projects": "Projelerimizi İnceleyin", "contact": "İletişime Geçin" }
+  },
+
+  "services": {
+    "meta": {
+      "title": "Hizmetler | AYK Proje Elektrik",
+      "description": "Proje danışmanlık & mühendislik, elektrik elektronik taahhüt, elektrik malzemesi satışı, zayıf akım sistemleri, güneş enerji sistemleri ve bakım & servis."
+    },
+    "title": "Hizmetler",
+    "intro": "Projenizin ihtiyaçlarına uygun, mühendislik odaklı hizmetler sunuyoruz. Aşağıda ana hizmet başlıklarımızı ve kapsamları görebilirsiniz.",
+    "cards": {
+      "proje-danismanlik-muhendislik": {
+        "title": "Proje Danışmanlık & Mühendislik",
+        "desc": "Keşif, projelendirme, şartname ve keşif özeti, maliyet optimizasyonu, uygulama denetimi.",
+        "bullets": [
+          "Saha keşfi ve teknik rapor",
+          "AG/OG tek hat ve uygulama projeleri",
+          "Keşif listesi ve metraj",
+          "Bütçe-kalite optimizasyonu",
+          "Yüklenici/üretici koordinasyonu"
+        ]
+      },
+      "elektrik-elektronik-taahhut": {
+        "title": "Elektrik Elektronik Taahhüt",
+        "desc": "Altyapı, kablolama, pano montajı, devreye alma ve test süreçleri.",
+        "bullets": [
+          "OG/AG kablolama ve dağıtım",
+          "Aydınlatma ve priz hatları",
+          "Pano imalatı/montajı",
+          "Topraklama ve yıldırımdan korunma",
+          "Test ve devreye alma"
+        ]
+      },
+      "elektrik-malzemesi-satisi": {
+        "title": "Elektrik Malzemesi Satışı",
+        "desc": "Marka garantili ürün tedariği; perakende ve toptan fiyat avantajı.",
+        "bullets": [
+          "Kablo, sigorta, şalter, kontaktör",
+          "Aydınlatma armatürleri",
+          "Pano ekipmanları",
+          "Otomasyon ve ölçüm cihazları"
+        ]
+      },
+      "zayif-akim-sistemleri": {
+        "title": "Zayıf Akım Sistemleri",
+        "desc": "Güvenlik, iletişim ve network altyapıları.",
+        "bullets": [
+          "CCTV ve IP kamera",
+          "Kartlı geçiş ve turnike",
+          "Yangın algılama ve ihbar",
+          "Data ve network kablolama"
+        ]
+      },
+      "gunes-enerji-sistemleri": {
+        "title": "Güneş Enerji Sistemleri (GES)",
+        "desc": "Çatı/arsa GES projelerinde anahtar teslim tasarım, kurulum ve izleme.",
+        "bullets": [
+          "Ön fizibilite ve üretim simülasyonu",
+          "Statik ve elektrik proje",
+          "Kurulum ve devreye alma",
+          "Uzaktan izleme ve raporlama"
+        ]
+      },
+      "bakim-servis": {
+        "title": "Bakım & Servis",
+        "desc": "Periyodik bakım, arıza müdahalesi ve performans iyileştirme.",
+        "bullets": [
+          "Termal kamera kontrolleri",
+          "Kompanzasyon takibi ve ayar",
+          "Yedek parça ve onarım",
+          "Periyodik raporlama"
+        ]
+      }
+    },
+    "faq": {
+      "title": "Sık Sorulan Sorular",
+      "items": [
+        {
+          "q": "Keşif ve teklif süreciniz nasıl işliyor?",
+          "a": "Ön görüşme sonrası 24–72 saat içinde saha keşfi planlanır. Teknik kapsam netleşince aynı gün özet teklif, 2–5 iş günü içinde detaylı teknik–mali teklif paylaşılır."
+        },
+        {
+          "q": "GES projelerinde ortalama süre nedir?",
+          "a": "Çatı veya arazi ölçeğine göre 25–60 gün arasında değişir. Keşif, projelendirme, onaylar, kurulum ve devreye alma aşamalarını kapsar."
+        },
+        {
+          "q": "Bakım ve garanti kapsamında neler var?",
+          "a": "İşçilik garantisi ve üretici garanti koşulları geçerlidir. Periyodik bakım sözleşmesi ile performans izleme, termal kontrol ve raporlama sağlanır."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Projeniz için hızlı teklif",
+      "subtitle": "Temel bilgileri iletin; aynı gün içinde size dönüş yapalım.",
+      "contact": "İletişime Geç",
+      "form": "Formu Doldur"
+    }
+  },
+
+  "projects": {
+    "meta": {
+      "title": "Projeler | AYK Proje Elektrik",
+      "description": "Seçili proje görselleri ve referans listemiz."
+    },
+    "title": "Projeler",
+    "intro": "Aşağıda fotoğraflarla öne çıkardığımız projelerimizi ve kapsamlı referans listemizi bulabilirsiniz.",
+    "references": {
+      "title": "Referanslarımız",
+      "subtitle": "2006–2025 arası tamamlanan işlerimizden seçki."
+    },
+    "table": { "no": "#", "project": "Proje", "category": "Kategori", "year": "Yıl" },
+    "cta": "Projeniz için teklif alın"
+  },
+  "projects_detail": {
+    "breadcrumbs": { "projects": "Projeler" },
+    "gallery_title": "Fotoğraf Galerisi",
+    "back": "Tüm projelere geri dön"
+  },
+
+  "contact": {
+    "meta": {
+      "title": "İletişim | AYK Proje Elektrik",
+      "description": "AYK Proje Elektrik iletişim bilgileri, sosyal medya hesapları ve teklif formu."
+    },
+    "title": "İletişim",
+    "intro": "Bizimle iletişime geçmek için aşağıdaki bilgilerden faydalanabilir veya hızlıca formu doldurabilirsiniz.",
+    "contact_info": {
+      "title": "İletişim Bilgileri",
+      "address": "Konuksever Mah. Emrah Cad. No:68/A, Muratpaşa / Antalya"
+    },
+    "social": { "title": "Sosyal Medya" },
+    "form": { "title": "Bizimle İletişime Geçin" }
+  },
+
+  "kvkk": {
+    "meta": {
+      "title": "KVKK | AYK Proje Elektrik",
+      "description": "6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamındaki bilgilendirme metni."
+    },
+    "title": "Kişisel Verilerin Korunması Kanunu (KVKK)",
+    "intro": "6698 sayılı KVKK uyarınca AYK Proje Elektrik Ltd. Şti. olarak kişisel verilerinizin korunmasına özen göstermekteyiz. İşbu metin, verilerinizin işlenme amaçlarını, saklama süresini ve haklarınızı açıklamak amacıyla hazırlanmıştır.",
+    "sections": {
+      "controller": {
+        "title": "Veri Sorumlusu",
+        "body": "AYK Proje Elektrik Ltd. Şti., KVKK kapsamında 'Veri Sorumlusu' sıfatıyla kişisel verilerinizi işlemektedir. İletişim bilgilerimize",
+        "link": "buradan"
+      },
+      "purposes": {
+        "title": "Kişisel Verilerin İşlenme Amaçları",
+        "body": "Müşteri ilişkileri, teklif, sözleşme süreçleri, yasal yükümlülüklerin yerine getirilmesi ve müşteri memnuniyeti kapsamında işlenmektedir."
+      },
+      "transfer": {
+        "title": "Aktarım",
+        "body": "Verileriniz; sadece mevzuat çerçevesinde ve belirtilen amaçlarla sınırlı olmak üzere iş ortaklarımız, resmi kurumlar ve hizmet sağlayıcılarla paylaşılabilir."
+      },
+      "retention": {
+        "title": "Saklama Süresi",
+        "body": "Kişisel verileriniz mevzuatta öngörülen süreler boyunca veya işleme amacının sona ermesine kadar saklanır; sonrasında güvenli şekilde imha edilir."
+      },
+      "rights": {
+        "title": "Haklarınız",
+        "items": [
+          "Verilerinizin işlenip işlenmediğini öğrenme",
+          "İşlenmişse buna ilişkin bilgi talep etme",
+          "Amacına uygun kullanılıp kullanılmadığını öğrenme",
+          "Eksik/yanlış işlenmişse düzeltilmesini isteme",
+          "Silinmesini veya yok edilmesini talep etme",
+          "Üçüncü kişilere aktarıldıysa bildirilmesini isteme"
+        ]
+      }
+    },
+    "footer": { "text": "Haklarınızı kullanmak veya detaylı bilgi almak için", "link": "iletişim" }
+  },
+
+  "privacy": {
+    "meta": {
+      "title": "Aydınlatma Metni | AYK Proje Elektrik",
+      "description": "AYK Proje Elektrik Ltd. Şti. tarafından kişisel verilerin işlenmesine ilişkin aydınlatma metni."
+    },
+    "title": "Kişisel Verilerin İşlenmesine İlişkin Aydınlatma Metni",
+    "intro": "6698 sayılı KVKK uyarınca, veri sorumlusu AYK Proje Elektrik Ltd. Şti. tarafından kişisel verilerinizin işlenmesine ilişkin olarak bu aydınlatma metni hazırlanmıştır.",
+    "kvkk_link_text": "KVKK metnimizi inceleyebilirsiniz",
+    "sections": {
+      "controller": {
+        "title": "Veri Sorumlusu",
+        "body": "AYK Proje Elektrik Ltd. Şti. veri sorumlusu sıfatıyla kişisel verilerinizi işlemektedir. İletişim için",
+        "link": "İletişim"
+      },
+      "collection": {
+        "title": "Toplama Yöntemi",
+        "body": "Verileriniz; web formları, e-posta/telefon yazışmaları, sözleşmeler, teklifler, saha keşfi ve hizmet süreçleri sırasında otomatik veya kısmen otomatik yollarla, fiziki ve elektronik ortamlarda elde edilebilir."
+      },
+      "purposes": {
+        "title": "İşleme Amaçları",
+        "items": [
+          "Teklif, keşif, sözleşme ve proje yönetimi süreçlerinin yürütülmesi",
+          "Müşteri ilişkileri ve hizmet kalitesi yönetimi",
+          "Hukuki yükümlülüklerin yerine getirilmesi ve yetkili kurumlara bildirimler",
+          "Finans ve muhasebe işlemleri (fatura, tahsilat vb.)",
+          "Operasyonel güvenlik, bakım ve denetim faaliyetleri"
+        ]
+      },
+      "legal": {
+        "title": "Hukuki Sebepler",
+        "body": "KVKK m.5 ve m.6 kapsamında; kanunlarda açıkça öngörülmesi, sözleşmenin kurulması veya ifası için zorunluluk, hukuki yükümlülüklerin yerine getirilmesi, veri sorumlusunun meşru menfaati ve gerektiğinde açık rıza hukuki sebeplerine dayanır."
+      },
+      "transfer": {
+        "title": "Aktarım",
+        "body": "Kişisel verileriniz; hizmet sağlayıcılarımıza, iş ortaklarımıza, hukuken yetkili kamu kurumlarına ve zorunlu hallerde yurt içindeki barındırma/BT hizmeti aldığımız üçüncü kişilere, KVKK hükümlerine uygun ve amaçla sınırlı olarak aktarılabilir."
+      },
+      "retention": {
+        "title": "Saklama Süresi",
+        "body": "Verileriniz, mevzuatta öngörülen süreler ve/veya işleme amacının gerektirdiği süre boyunca saklanır; süre sonunda mevzuata uygun yöntemlerle silinir, yok edilir veya anonim hale getirilir."
+      },
+      "rights": {
+        "title": "İlgili Kişinin Hakları",
+        "body": "KVKK m.11 uyarınca; kişisel verilerinize ilişkin bilgi talep etme, düzeltilmesini, silinmesini/yok edilmesini isteme, işleme amacına uygun kullanılıp kullanılmadığını öğrenme ve üçüncü kişilere aktarılmışsa bildirilmesini talep etme haklarına sahipsiniz."
+      },
+      "application": {
+        "title": "Başvuru Yöntemi",
+        "body": "Haklarınıza ilişkin taleplerinizi; kimlik doğrulamasına imkân verecek belgelerle birlikte yazılı olarak veya KEP, güvenli elektronik imza ya da Şirket’in belirlediği kanallar aracılığıyla iletebilirsiniz. Başvurular mevzuata uygun şekilde en kısa sürede sonuçlandırılır."
+      }
+    },
+    "footer": { "text": "Detaylı bilgi veya başvuru için", "link": "İletişim sayfamızdan bize ulaşın" }
+  }
+}
